@@ -1,0 +1,687 @@
+/*
+
+Palette
+
+vert : #1DB954
+noir : #191414
+blanc : white
+
+*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeInAnimation 1s ease-in-out forwards;
+}
+
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+}
+
+
+body {
+    background: #191414;
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    background: #191414;
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 20px;
+  margin: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  transition: right 0.3s ease;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  background: rgba(25, 20, 20, 0.8);
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list li {
+  display: inline-block;
+  margin-left: 20px;
+  position: relative;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: 'Ubuntu', sans-serif;
+  padding: 8px 15px;
+  display: block;
+  transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav-list li:hover {
+  background-color: #1DB954;
+  box-shadow: 0 0 10px #1DB954;
+}
+
+.nav-list li:hover a {
+  color: white;
+  transform: scale(1.1);
+  text-shadow: 0 0 10px #1DB954;
+}
+
+/* Style du bouton et du contenu du dropdown */
+.dropbtn {
+  background-color: #1DB954;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  position: relative;
+  z-index: 1001;
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+/* Style du sous-menu, initialement caché */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1001; 
+}
+
+/* Afficher le sous-menu lorsqu'on survole le bouton */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Style des liens dans le sous-menu */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #1db95470;
+}
+
+
+
+
+
+
+/* page */
+
+.highlight {
+    color: #1DB954; /* highlight en vert */
+}
+h1 {
+    font-size: 4em;
+    color: white;
+    margin-left: 1.5em;
+    margin-top: 1.5em;
+    bottom: 0.5em;
+    top: 0.5em;
+
+}
+
+.profile-picture {
+    margin-top: 20px;
+    width: auto;
+    height: 400px;
+    margin-left: 100px;
+    position: absolute;
+    top: 30em;
+    left: 15em; 
+    transform: translateX(-50%);
+}
+
+
+
+.moi {
+    color: white;
+    margin-top: 3em;
+    margin-right: 4em;
+    margin-left: 28em; 
+    font-size: 1.5em;
+    text-align: left;
+}
+
+.cv {
+    color: white;
+    margin-right: 10em;
+    margin-left: 10em; 
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.me-contacter {
+    color: white;
+    margin-right: 10em;
+    margin-left: 10em; 
+    font-size: 1.5em;
+    text-align: center;
+}
+
+
+
+.experience-txt {
+    color: white;
+    font-size: 1.5em;
+    text-align: left;
+    margin-left: 4em;
+    margin-right: 4em;
+    margin-top: 1.5em;
+    bottom: 0.5em;
+    top: 0.5em;
+
+}
+
+.formations-txt {
+  color: white;
+  font-size: 1.5em;
+  text-align: left;
+  margin-left: 4em;
+  margin-right: 4em;
+  margin-top: 1.5em;
+  bottom: 0.5em;
+  top: 0.5em;
+
+}
+
+.projets-txt {
+  color: white;
+  font-size: 1.5em;
+  text-align: left;
+  margin-left: 4em;
+  margin-right: 4em;
+  margin-top: 1.5em;
+  bottom: 0.5em;
+  top: 0.5em;
+
+}
+
+.projets-lien {
+  color: white;
+  font-size: 1em;
+  text-align: left;
+  margin-left: 6em;
+  margin-right: 4em;
+  margin-top: 1.5em;
+  bottom: 0.5em;
+  top: 0.5em;
+
+}
+
+.projet-img {
+
+  display: block;
+  margin-left: 6em;
+  border-radius: 10px;
+}
+
+.lien-github {
+  text-decoration: none; 
+  color: #000;
+  background-color: #ccc; 
+  transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.lien-github:hover {
+  text-decoration: underline;
+  color: #1DB954;
+  background-color: #fff;
+}
+
+.divers-txt {
+  color: white;
+  font-size: 1.5em;
+  text-align: left;
+  margin-left: 4em;
+  margin-right: 4em;
+  margin-top: 1.5em;
+  bottom: 0.5em;
+  top: 0.5em;
+
+}
+
+
+
+
+
+
+
+
+.container {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px;
+}
+
+.column {
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  gap: 20px;
+}
+
+.image-container-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-end; 
+}
+
+.image-container-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.divers-img-g, .divers-img-d {
+  max-width: 100%;
+  height: auto;
+}
+
+/* bordures blanches ( c'est pour les images de divers )
+.column {
+  border: 1px solid white;
+  padding: 10px;
+} */
+
+
+
+
+
+
+.divers-img-d{
+  border-radius: 10px;
+}
+.divers-img-g {
+  margin: 0 10px;
+  border-radius: 10px;
+}
+
+
+
+
+.titre {
+    color: white;
+    font-size: 2em;
+    text-align: left;
+    margin-left: 3em;
+    margin-right: 4em;
+    margin-top: 1.5em;
+    bottom: 0.5em;
+    top: 0.5em;
+    font-family: 'Ubuntu', sans-serif;
+
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center; 
+}
+
+.down-arrow {
+    margin-top: 3em;
+    margin-bottom: 1em;
+    margin-left: 28em;
+    margin-right: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease; 
+    height: 80px;
+    filter: hue-rotate(0deg);
+}
+
+.down-arrow:hover {
+    transform: translateY(+5px);
+}
+
+
+/* Téléchargement */
+
+.download-button {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    width: 300px;
+    height: 50px;
+    padding: 10px 20px;
+    border: 2px solid #1DB954;
+    background-color: transparent;
+    color: white;
+    font-family: "Ubuntu", sans-serif;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  .download-button:hover {
+    background-color: #1DB954;
+    color: white;
+    box-shadow: 0 0 10px #1DB954;
+  }
+  
+  .download-button .button-text::before {
+    content: "Télécharger mon CV";
+    transition: opacity 0.3s;
+    
+  }
+  
+  .download-button:hover .button-text::before {
+    content: "Cliquez pour télécharger";
+    animation: fadeInAnimation 1s ease-in-out forwards;
+  }
+  
+  .button-text::before {
+    position: relative;
+    z-index: 2;
+  }
+  
+  
+  
+  .download-container {
+    text-align: center;
+  
+  }
+
+
+
+
+  /* Barre de progression */
+
+#barreChargement {
+    width: 300px;
+    height: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 13em;
+    margin-right: 1em;
+    position: absolute;
+    top: 0.9em; 
+    left: 0em; 
+}
+
+#progression100 {
+    height: 100%;
+    background-color: #1DB954;
+    width: 100%; /* pourcentage de la barre */
+    transition: width 0.3s ease;
+}
+
+#progression95 {
+  height: 100%;
+  background-color: #1DB954;
+  width: 95%; /* pourcentage de la barre */
+  transition: width 0.3s ease;
+}
+
+
+#progression90 {
+    height: 100%;
+    background-color: #1DB954;
+    width: 90%; /* pourcentage de la barre */
+    transition: width 0.3s ease;
+}
+
+#progression85 {
+    height: 100%;
+    background-color: #1DB954;
+    width: 85%; /* pourcentage de la barre */
+    transition: width 0.3s ease;
+}
+
+#progression80 {
+    height: 100%;
+    background-color: #1DB954;
+    width: 80%; /* pourcentage de la barre */
+    transition: width 0.3s ease;
+}
+
+#progression70 {
+    height: 100%;
+    background-color: #1DB954;
+    width: 70%; /* pourcentage de la barre */
+    transition: width 0.3s ease;
+}
+
+#progression60 {
+  height: 100%;
+  background-color: #1DB954;
+  width: 60%; /* pourcentage de la barre */
+  transition: width 0.3s ease;
+}
+
+
+
+#barreChargement:hover #progression {
+    box-shadow: 0 0 10px rgba(29, 185, 84, 10);
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+#barreChargement:hover {
+    box-shadow: 0 0 10px rgba(29, 185, 84, 1);
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+#barreChargement::after {
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.pourcentage {
+    position: absolute;
+    left: 30em;
+}
+
+
+/* Competences */ 
+
+  
+.depliant-title {
+    font-size: 30px;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 10px 10px 0 48px;
+    display: block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: 'Ubuntu', sans-serif;
+    margin-right: 1em;
+  }
+  
+  .depliant-content {
+    font-size: 20px;
+    padding: 0px 14px;
+    margin: 0 40px;
+    height: 0;
+    overflow: hidden;
+    z-index: -1;
+    position: relative;
+    opacity: 0;
+    color: #ffffff;
+    font-family: 'Ubuntu', sans-serif;
+    -webkit-transition: .4s ease;
+    -moz-transition: .4s ease;
+    -o-transition: .4s ease;
+    transition: .4s ease;
+    margin-right: 1em;
+  }
+  
+  .depliant:checked ~ .depliant-content{
+    height: auto;
+    opacity: 1;
+    padding: 14px;
+    color: #ffffff;
+    margin-right: 1em;
+  }
+  
+  .plus {
+    position: absolute;
+    margin-top: 4px;
+    z-index: 1;
+    font-size: 42px;
+    line-height: 100%;
+    -webkit-user-select: none;    
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    -webkit-transition: .2s ease;
+    -moz-transition: .2s ease;
+    -o-transition: .2s ease;
+    transition: .2s ease;
+    color: white;
+    margin-left: 2.2em;
+    margin-right: 1em;
+  }
+  
+  .depliant:checked ~ .plus {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin-right: 1em;
+  }
+  
+  .depliant {
+    display: none;
+    margin-right: 1em;
+  }
+  
+  
+  
+  
+  .depliant-title {
+    color: #ffffff;
+    font-family: 'Ubuntu', sans-serif;
+    margin-left: 2.5em;
+    margin-right: 1em;
+  }
+  
+  .depliant-content {
+    color: #ffffff;
+    font-family: 'Ubuntu', sans-serif;
+    margin-left: 5.5em;
+    margin-right: 5.5em;
+  }
+  
+
+/* Foooooooter */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .logo-uca {
+    float: left;
+  }
+  
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    transform: translateX(15px);
+  }
+  
+  .logo-container img {
+    margin: 0 25px; /* espace logos */
+  }
+  
+  .a-moi {
+    float: right;
+  }
+  
+
+.fleches-footer {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+.fleche-footer {
+    height: 60px;
+    margin-left: 2em;
+}
+
+
+
+
+/* Lightbox */
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: auto;
+}
+
+.lightbox-img {
+  display: block;
+  margin: 0 auto;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+
+
