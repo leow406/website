@@ -11,3 +11,4 @@ function openLightbox(imageSrc) {
 function closeLightbox() {
   document.getElementById('lightbox').style.display = "none";
 }
+

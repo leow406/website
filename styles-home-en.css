@@ -684,4 +684,14 @@ cursor: pointer;
 }
 
 
+.help-icon {
+  margin-left: 5px;
+  cursor: pointer;
+  height: 20px;
+  width: auto;
+  filter: brightness(0) invert(1); /* Change la couleur de l'icône en blanc */
+  position: relative; /* Permet de positionner l'icône */
+  top: -20px; /* Surélevé de 20px */
+}
+
 
