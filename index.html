@@ -57,6 +57,8 @@
             </span> à Aubière, dans le 63. Je suis passionné d’informatique et de cybersécurité depuis mes
             14ans.
             <br>
+            <br>Je suis actuellement en recherche d'alternance
+            <br>  
             <br>
             <span class="highlight">Scrollez</span> un peu pour en apprendre plus sur moi
         </p>
@@ -94,7 +96,7 @@
 <div class="depliant-container">
     <input id="q7" type="checkbox" class="depliant" checked>
     <div class="plus"><span class="highlight">+ </span></div>
-    <label for="q7" class="depliant-title">Bachelor Universitaire et Technologique Réseaux et télécommunications</label>
+    <label for="q7" class="depliant-title">Bachelor Universitaire et Technologique Réseaux et télécommunications (Aubière, dans le 63)</label>
     <div class="depliant-content">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Année 1 : <span class="highlight">En cours ...</span></div>
 </div>
 
@@ -260,42 +262,75 @@
     </div>
 
 <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// --> 
-
 <div id="projects"></div>
 <h1 class="fade-in">Mes <span class="highlight">projets</span></h1>
-<p class="titre"><span class="highlight">ProxySwitcher</span></p>
-<p class="projets-txt">J’aime développer des scripts pour me simplifier la vie. Par exemple, au lycée, les connexions Linux étaient 
-    systématiquement refusées. Deux amis et moi-même avons donc cherché d'où venait le problème et il s'avère que c'était le proxy 
-    qui refusait les connexions. Nous avons donc analysé le trafic avec Wireshark et avons trouvé l’adresse IP et le port du proxy. 
-    Pour eviter de devoir reparrametrer le serveur mandataire (proxy) à chaque fois que je devais basculer 
-    entre mon réseau personnel et celui du lycée, j'ai développé cet outil qui le fait à ma place.</p>
-<a onclick="openLightbox('images/ProxySwitcher.png')"><img src="images/ProxySwitcher.png" class="projet-img" style="width: 400px; height: auto;"></a>
-<p class="projets-txt">Le script demande d’entrer l’adresse IP et le PORT du proxy lors de la première connexion, mais il est possible
-     de changer ce paramètre n’importe quand. Le script enregistre ensuite ces données dans un fichier nommé optionPS.txt pour pouvoir
-     les réutiliser dès qu’on voudrait réactiver le proxy.</p>
-<p class="projets-txt">Ici, par exemple, on change les paramètres en sélectionnant l’option 4 :</p>
-<a onclick="openLightbox('images/ProxySwitcher2.png')"><img src="images/ProxySwitcher2.png" class="projet-img" style="width: 400px; height: auto;"></a>
+<p class="titre"><span class="highlight" style="text-decoration: underline;">ProxySwitcher</span></p>
+
+<p class="titre"><span class="highlight">Contexte :</span>
+<p class="projets-txt">Au lycée, l'accès aux connexions Linux était régulièrement bloqué, posant des difficultés pour travailler efficacement. Pour résoudre ce 
+    problème, j'ai entrepris de développer un script permettant de contourner les restrictions du proxy qui rejetaient les connexions.
+</p>
+<p class="titre"><span class="highlight">Objectif :</span>
+<p class="projets-txt">L'objectif principal était de simplifier le processus de basculement entre mon réseau personnel et celui du lycée en évitant de devoir 
+    reconfigurer manuellement le proxy à chaque fois. Le script devait permettre de saisir l'adresse IP et le port du proxy lors de la première connexion, 
+    tout en offrant la flexibilité de modifier ces paramètres à tout moment. De plus, les données devaient être enregistrées dans un fichier pour une utilisation 
+    ultérieure.
+</p>
+<p class="titre"><span class="highlight">Compétences développées :</span>
+<p class="projets-txt"><span class="highlight">Programmation :</span> Développement d'un script pour gérer les paramètres de proxy.</p>
+<p class="projets-txt"><span class="highlight">Analyse réseau :</span> Utilisation de Wireshark pour identifier l'adresse IP et le port du proxy.</p>
+<p class="projets-txt"><span class="highlight">Gestion de fichiers :</span> Enregistrement et récupération des données dans un fichier texte.</p>
+</p>
 
 <br>
-<p class="titre"><span class="highlight">Serveur de stockage de fichiers et de gestion de torrents</span></p>
-<p class="projets-txt">Stocker des fichiers prend de la place. Il m’arrive donc souvent de devoir stocker des fichiers sur un disque dur 
-    externe pour faire une sauvegarde. Cependant, cela a un inconvénient : si on ne possède pas le disque dur externe sur soi lorsque l’on 
-    en a besoin, les données nous sont alors inaccessibles. De plus, les solutions de cloud sont souvent payantes si l'on veut stocker une 
-    grosse quantité de données. Je me suis donc donné pour projet de créer mon propre serveur de stockage de fichiers. Pour cela, j’ai 
-    récupéré et réparé un PC défectueux de mon lycée. J’y ai ajouté un disque dur de 2 To en plus de celui existant :</p>
-    <!-- <a><img src="images/serveur.jpg" class="projet-img" style="width: 300px; height: auto;"></a> -->
+<p class="projets-txt">Voici quelques images du projet :</p>
+<br>
 
-<p class="projets-txt">J'y ai installé Ubuntu, lui ai attribué une adresse IP statique et je peux donc maintenant m'y connecter via SSH. 
-    Depuis SSH, j'ai configuré mon serveur pour y ajouter un gestionnaire de torrents, afin de pouvoir envoyer mes fichiers facilement. 
-    J'ai donc choisi qBittorrent car il possède une interface web :</p>
-<a onclick="openLightbox('images/webui.png')"><img src="images/webui.png" class="projet-img" style="width: 400px; height: auto;"></a>
+<div class="container">
+    <div class="column">
+        <div class="image-container-1">
+            <a onclick="openLightbox('images/ProxySwitcher.png')"><img src="images/ProxySwitcher2.png" class="projet-img" style="width: 400px; height: auto;"></a>
+        </div>
+    </div>
+    <div class="column">
+        <div class="image-container-2">
+            <a onclick="openLightbox('images/ProxySwitcher2.png')"><img src="images/ProxySwitcher.png" class="projet-img" style="width: 400px; height: auto;"></a>
+        </div>
+    </div>
+</div>
 
-<p class="projets-txt">Il suffit d'indiquer au programme l’IP du serveur web (ici mon serveur) et d’ouvrir le port sur ma box pour pouvoir 
-    y accéder de n’importe où. On n'oublie bien évidemment pas d’ajouter un mot de passe fort. Pour démarrer facilement mon gestionnaire 
-    de torrent au démarrage, j’ajoute un service que l'on oublie pas d'activer, et c'est pret ! </p>
+<br>
 
-    <a onclick="openLightbox('images/service.png')"><img src="images/service.png" class="projet-img" style="width: 400px; height: auto;"></a>
+<p class="titre"><span class="highlight" style="text-decoration: underline;">Serveur de stockage de fichiers et de gestion de torrents</span></p>
 
+<p class="titre"><span class="highlight">Contexte :</span></p>
+<p class="projets-txt">Stocker des fichiers peut devenir contraignant, notamment en termes d'espace et d'accessibilité. Les disques durs externes sont souvent utilisés pour les sauvegardes, mais ils nécessitent d'être physiquement présents. De plus, les solutions de stockage cloud sont souvent payantes pour de grandes quantités de données. Pour résoudre ce problème, j'ai entrepris de créer mon propre serveur de stockage de fichiers.</p>
+
+<p class="titre"><span class="highlight">Objectif :</span></p>
+<p class="projets-txt">L'objectif principal était de disposer d'un espace de stockage accessible de n'importe où, sans dépendre d'un support physique ou de services payants. Pour cela, j'ai récupéré un PC défectueux que j'ai réparé et équipé d'un disque dur de 2 To. En installant Ubuntu et en configurant une adresse IP statique, j'ai facilité l'accès au serveur via SSH. Ensuite, j'ai ajouté un gestionnaire de torrents, en l'occurrence qBittorrent, pour simplifier l'envoi de fichiers. La configuration de l'interface web du gestionnaire de torrents permet un accès facile à distance, avec la sécurisation par un mot de passe robuste.</p>
+
+<p class="titre"><span class="highlight">Compétences développées :</span></p>
+<p class="projets-txt"><span class="highlight">Réparation et configuration matérielle :</span> Récupération et réparation d'un PC défectueux, ajout d'un disque dur supplémentaire.</p>
+<p class="projets-txt"><span class="highlight">Administration système :</span> Installation et configuration d'Ubuntu, attribution d'une adresse IP statique.</p>
+<p class="projets-txt"><span class="highlight">Gestion de réseau :</span> Ouverture des ports sur la box pour permettre l'accès à distance.</p>
+<p class="projets-txt"><span class="highlight">Utilisation de logiciels :</span> Installation et configuration de qBittorrent pour la gestion des torrents.</p>
+<p class="projets-txt"><span class="highlight">Sécurité informatique :</span> Ajout d'un mot de passe fort pour sécuriser l'accès au serveur.</p>
+<br>
+<p class="projets-txt">Voici quelques images du projet :</p>
+<br>
+
+<div class="container">
+    <div class="column">
+        <div class="image-container-1">
+            <a onclick="openLightbox('images/webui.png')"><img src="images/webui.png" class="projet-img" style="width: 400px; height: auto;"></a>
+        </div>
+    </div>
+    <div class="column">
+        <div class="image-container-2">
+            <a onclick="openLightbox('images/service.png')"><img src="images/service.png" class="projet-img" style="width: 400px; height: auto;"></a>
+        </div>
+    </div>
+</div>
 
 
 <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// --> 
