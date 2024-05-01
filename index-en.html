@@ -22,7 +22,7 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#misc">Miscellaneous</a></li>
-                <li><a href="#cv">CV</a></li>
+                <li><a href="#cv">Resume</a></li>
                 <li><a href="#contact">Contact</a></li>
 
                 
@@ -209,14 +209,14 @@
 <div class="depliant-container">
     <input id="q4" type="checkbox" class="depliant">
     <div class="plus"><span class="highlight">+ </div>
-    <label for="q4" class="depliant-title">Téléphonie
+    <label for="q4" class="depliant-title">Telephony
         </span></label>
 
-        <div class="depliant-content">Mise en place d'un serveur d'appel<div id="barreChargement">
+        <div class="depliant-content">Setting up a call server<div id="barreChargement">
                 <div id="progression60"></div>
             </div><span class="pourcentage">60%</span></div>
 
-        <div class="depliant-content">Administration Systeme<div id="barreChargement">
+        <div class="depliant-content">System Administration<div id="barreChargement">
                 <div id="progression80"></div>
             </div><span class="pourcentage">80%</span></div>    
 
@@ -228,14 +228,14 @@
 <div class="depliant-container">
     <input id="q5" type="checkbox" class="depliant">
     <div class="plus"><span class="highlight">+ </div>
-    <label for="q5" class="depliant-title">Administration systemes
+    <label for="q5" class="depliant-title">System Administration
         </span></label>
 
         <div class="depliant-content">Active Directory<div id="barreChargement">
                 <div id="progression70"></div>
             </div><span class="pourcentage">70%</span></div>
 
-        <div class="depliant-content">Machine virtuelles et ESXi<div id="barreChargement">
+        <div class="depliant-content">Virtual machines and ESXi<div id="barreChargement">
                 <div id="progression80"></div>
             </div><span class="pourcentage">80%</span></div>
     </div>
@@ -257,44 +257,76 @@
 <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// --> 
 
 <div id="projects"></div>
-<h1 class="fade-in">Mes <span class="highlight">projets</span></h1>
-<p class="titre"><span class="highlight">ProxySwitcher</span></p>
-<p class="projets-txt">I like developing scripts to simplify my life. For example, in high school, Linux connections were consistently denied. 
-    Two friends and I investigated the issue and found that the proxy was rejecting the connections. So, we analyzed the traffic with 
-    Wireshark and found the IP address and port of the proxy. To avoid having to reconfigure the proxy server every time I needed to 
-    switch between my personal network and the school's, I developed this tool to do it for me.</p>
-<a onclick="openLightbox('images/ProxySwitcher.png')"><img src="images/ProxySwitcher.png" class="projet-img" style="width: 400px; height: auto;"></a>
-<p class="projets-txt">The script prompts to enter the IP address and PORT of the proxy during the first connection, but it's possible to 
-    change this setting anytime. The script then saves this data in a file named optionPS.txt for reuse whenever we want to reactivate 
-    the proxy.</p>
-<p class="projets-txt">Here, for example, we change the settings by selecting option 4:</p>
-<a onclick="openLightbox('images/ProxySwitcher2.png')"><img src="images/ProxySwitcher2.png" class="projet-img" style="width: 400px; height: auto;"></a>
+<h1 class="fade-in">My <span class="highlight">projects</span></h1>
+<p class="titre"><span class="highlight" style="text-decoration: underline;">ProxySwitcher</span></p>
+
+<p class="titre"><span class="highlight">Context:</span>
+<p class="projets-txt">In high school, access to Linux connections was regularly blocked, posing difficulties for efficient work. To solve this problem, I undertook to develop a script to bypass the proxy restrictions that were blocking connections.
+</p>
+<p class="titre"><span class="highlight">Objective:</span>
+<p class="projets-txt">The main objective was to simplify the process of switching between my personal network and the school's network without having to manually reconfigure the proxy each time. The script should allow entering the IP address and port of the proxy during the first connection, while also providing the flexibility to modify these settings at any time. Additionally, the data should be saved in a file for later use.
+</p>
+<p class="titre"><span class="highlight">Developed Skills:</span>
+<p class="projets-txt"><span class="highlight">Programming:</span> Development of a script to manage proxy settings.</p>
+<p class="projets-txt"><span class="highlight">Network Analysis:</span> Use of Wireshark to identify the IP address and port of the proxy.</p>
+<p class="projets-txt"><span class="highlight">File Management:</span> Saving and retrieving data in a text file.</p>
+</p>
 
 <br>
-<p class="titre"><span class="highlight">Serveur de stockage de fichiers et de gestion de torrents</span></p>
-<p class="projets-txt">Storing files takes up space. So, I often have to store files on an external hard drive for backup. However, this 
-    has a drawback: if we don't have the external hard drive with us when we need it, the data becomes inaccessible. Also, cloud 
-    solutions are often paid if you want to store a large amount of data. So, I decided to create my own file storage server. For 
-    this, I retrieved and repaired a defective PC from my high school. I added a 2TB hard drive in addition to the existing one:</p>
-    <!-- <a><img src="images/serveur.jpg" class="projet-img" style="width: 300px; height: auto;"></a> -->
+<p class="projets-txt">Here are some images of the project:</p>
+<br>
 
-<p class="projets-txt">I installed Ubuntu on it, assigned it a static IP address, and can now connect to it via SSH. From SSH, I configured 
-    my server to add a torrent manager to it, so I can easily send my files. So, I chose qBittorrent because it has a web interface:</p>
-<a onclick="openLightbox('images/webui.png')"><img src="images/webui.png" class="projet-img" style="width: 400px; height: auto;"></a>
+<div class="container">
+    <div class="column">
+        <div class="image-container-1">
+            <a onclick="openLightbox('images/ProxySwitcher.png')"><img src="images/ProxySwitcher2.png" class="projet-img" style="width: 400px; height: auto;"></a>
+        </div>
+    </div>
+    <div class="column">
+        <div class="image-container-2">
+            <a onclick="openLightbox('images/ProxySwitcher2.png')"><img src="images/ProxySwitcher.png" class="projet-img" style="width: 400px; height: auto;"></a>
+        </div>
+    </div>
+</div>
 
-<p class="projets-txt">You just need to specify the IP of the web server (here my server) to the program and open the port on my router 
-    to access it from anywhere. We don't forget to add a strong password, of course. To easily start my torrent manager on startup, 
-    I add a service that we don't forget to activate, and it's ready!</p>
+<br>
 
-    <a onclick="openLightbox('images/service.png')"><img src="images/service.png" class="projet-img" style="width: 400px; height: auto;"></a>
+<p class="titre"><span class="highlight" style="text-decoration: underline;">File Storage and Torrent Management Server</span></p>
 
+<p class="titre"><span class="highlight">Context:</span></p>
+<p class="projets-txt">Storing files can become anoying and complex, especially in terms of space and accessibility. External hard drives are often used for backups, but they require physical presence. Additionally, cloud storage solutions are often paid for large amounts of data. To solve this problem, I set out to create my own file storage server.</p>
 
+<p class="titre"><span class="highlight">Objective:</span></p>
+<p class="projets-txt">The main objective was to have storage space accessible from anywhere, without relying on physical media or paid services. To achieve this, I acquired a defective PC that I repaired and equipped with a 2 TB hard drive. By installing Ubuntu and configuring a static IP address, I facilitated access to the server via SSH. Then, I added a torrent manager, specifically qBittorrent, to simplify file uploads. The configuration of the torrent manager's web interface allows easy remote access, with security provided by a strong password.</p>
+
+<p class="titre"><span class="highlight">Developed Skills:</span></p>
+<p class="projets-txt"><span class="highlight">Hardware Repair and Configuration:</span> Recovery and repair of a defective PC, addition of an additional hard drive.</p>
+<p class="projets-txt"><span class="highlight">System Administration:</span> Installation and configuration of Ubuntu, assignment of a static IP address.</p>
+<p class="projets-txt"><span class="highlight">Network Management:</span> Opening ports on the router to allow remote access.</p>
+<p class="projets-txt"><span class="highlight">Software Usage:</span> Installation and configuration of qBittorrent for torrent management.</p>
+<p class="projets-txt"><span class="highlight">Computer Security:</span> Setting up IP rules to refuse unknown IP addresses and addition of a strong password to secure access to the server.</p>
+<br>
+<p class="projets-txt">Here are some images of the project:</p>
+<br>
+
+<div class="container">
+    <div class="column">
+        <div class="image-container-1">
+            <a onclick="openLightbox('images/webui.png')"><img src="images/webui.png" class="projet-img" style="width: 400px; height: auto;"></a>
+        </div>
+    </div>
+    <div class="column">
+        <div class="image-container-2">
+            <a onclick="openLightbox('images/service.png')"><img src="images/service.png" class="projet-img" style="width: 400px; height: auto;"></a>
+        </div>
+    </div>
+</div>
 
 <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// --> 
 
 <div id="misc"></div>
-<h1 class="fade-in"><span class="highlight">Divers</span></h1>
-<p class="titre">Centres d'intérêts :</p>
+<h1 class="fade-in"><span class="highlight">Miscs</span></h1>
+<p class="titre">Hobbies :</p>
 <p class="divers-txt"><span class="highlight">Informatique :</span> I enjoy tinkering with computers, understanding how they work, and even building them myself.</p>
 <p class="divers-txt"><span class="highlight">Piano :</span> I regularly practice the piano and have learned the basics of music theory and some self-taught songs like Wet Hands by C418, Imagine by John Lennon, and Experience by Ludovico Einaudi.</p>
 <p class="divers-txt"><span class="highlight">Photographie :</span> I regularly practice photography with a professional camera. I photograph nature, my dog, and nighttime or abandoned places. Here are a few:</p>
@@ -313,16 +345,16 @@
     </div>
 </div>
     
-    <p class="titre">Informations complementaires :</p>
+    <p class="titre">Others informations</p>
     <p class="divers-txt">I have a <span class="highlight">driver's license (permis B)</span>.</p>
 </div>
 
 <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// --> 
 <div id="cv"></div>
-<h1 class="fade-in">Mon <span class="highlight">CV</span></h1>
+<h1 class="fade-in">My <span class="highlight">resume</span></h1>
 <br>
 <br>
-<p class="cv">If what you've read on my portfolio interests you, you can <span class="highlight">download</span> my CV...</p>
+<p class="cv">If what you've read on my portfolio interests you, you can <span class="highlight">download</span> my resume...</p>
 <br>
 <br>
 <div class="download-container">
