@@ -425,95 +425,44 @@ border-radius: 10px;
 
 
 /* Barre de progression */
-
 #barreChargement {
   width: 300px;
   height: 20px;
   background-color: #333;
   border-radius: 10px;
   overflow: hidden;
-  margin-left: 13em;
+  margin-left: 17em;
   margin-right: 1em;
   position: absolute;
   top: 0.9em; 
   left: 0em; 
 }
 
-#progression100 {
+#progression100, #progression95, #progression90, #progression85, #progression80, #progression70, #progression60 {
   height: 100%;
   background-color: #1DB954;
-  width: 100%; /* pourcentage de la barre */
   transition: width 0.3s ease;
 }
 
-#progression95 {
-height: 100%;
-background-color: #1DB954;
-width: 95%; /* pourcentage de la barre */
-transition: width 0.3s ease;
-}
+#progression100 { width: 100%; }
+#progression95 { width: 95%; }
+#progression90 { width: 90%; }
+#progression85 { width: 85%; }
+#progression80 { width: 80%; }
+#progression70 { width: 70%; }
+#progression60 { width: 60%; }
 
-
-#progression90 {
-  height: 100%;
-  background-color: #1DB954;
-  width: 90%; /* pourcentage de la barre */
-  transition: width 0.3s ease;
-}
-
-#progression85 {
-  height: 100%;
-  background-color: #1DB954;
-  width: 85%; /* pourcentage de la barre */
-  transition: width 0.3s ease;
-}
-
-#progression80 {
-  height: 100%;
-  background-color: #1DB954;
-  width: 80%; /* pourcentage de la barre */
-  transition: width 0.3s ease;
-}
-
-#progression70 {
-  height: 100%;
-  background-color: #1DB954;
-  width: 70%; /* pourcentage de la barre */
-  transition: width 0.3s ease;
-}
-
-#progression60 {
-height: 100%;
-background-color: #1DB954;
-width: 60%; /* pourcentage de la barre */
-transition: width 0.3s ease;
-}
-
-
-
-#barreChargement:hover #progression {
-  box-shadow: 0 0 10px rgba(29, 185, 84, 10);
-  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
-}
-
-#barreChargement:hover {
+#barreChargement:hover, #barreChargement:hover #progression {
   box-shadow: 0 0 10px rgba(29, 185, 84, 1);
-  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
-}
-
-#barreChargement::after {
   transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
 }
 
 .pourcentage {
   position: absolute;
-  left: 30em;
+  left: 34em;
 }
 
-
 /* Competences */ 
-
-
 .depliant-title {
   font-size: 30px;
   width: 100%;
@@ -521,7 +470,7 @@ transition: width 0.3s ease;
   margin: 0;
   padding: 10px 10px 0 48px;
   display: block;
-  cursor: pointer;
+  cursor: pointer; /* Indicates clickable */
   color: #ffffff;
   font-family: 'Ubuntu', sans-serif;
   margin-right: 1em;
@@ -538,14 +487,12 @@ transition: width 0.3s ease;
   opacity: 0;
   color: #ffffff;
   font-family: 'Ubuntu', sans-serif;
-  -webkit-transition: .4s ease;
-  -moz-transition: .4s ease;
-  -o-transition: .4s ease;
   transition: .4s ease;
+  cursor: pointer; /* Indicates clickable */
   margin-right: 1em;
 }
 
-.depliant:checked ~ .depliant-content{
+.depliant:checked ~ .depliant-content {
   height: auto;
   opacity: 1;
   padding: 14px;
@@ -559,24 +506,15 @@ transition: width 0.3s ease;
   z-index: 1;
   font-size: 42px;
   line-height: 100%;
-  -webkit-user-select: none;    
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
   user-select: none;
-  -webkit-transition: .2s ease;
-  -moz-transition: .2s ease;
-  -o-transition: .2s ease;
   transition: .2s ease;
   color: white;
+  cursor: pointer; /* Indicates clickable */
   margin-left: 2.2em;
   margin-right: 1em;
 }
 
 .depliant:checked ~ .plus {
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
   transform: rotate(45deg);
   margin-right: 1em;
 }
@@ -585,9 +523,6 @@ transition: width 0.3s ease;
   display: none;
   margin-right: 1em;
 }
-
-
-
 
 .depliant-title {
   color: #ffffff;
@@ -602,6 +537,7 @@ transition: width 0.3s ease;
   margin-left: 5.5em;
   margin-right: 5.5em;
 }
+
 
 
 /* Foooooooter */
