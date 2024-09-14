@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="styles-home.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap">
+</head>
+
+<body class="fade-in">
+    
+    <header>
+        <div class="arrow-indicator"></div>
+        <div id="about"></div>
+        <button class="dropbtn" onclick="window.location.href='../index.html#projects';">Accueil</button>
+    </header>
+    <br>
+
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// --> 
+
+<h1 >Mes <span class="highlight">projets</span> : Interface web de monitoring</h1>
+
+<p class="titre"><span class="highlight">Contexte :</span></p>
+<p class="projets-txt">Dans le cadre de la gestion d'un serveur personnel ou professionnel, il est essentiel de pouvoir surveiller les performances, l'état des services, et la connectivité. Un site de monitoring centralisé permet à un administrateur de vérifier l'état du serveur en temps réel, d'effectuer des contrôles à distance et d'optimiser la gestion des ressources.</p>
+
+<p class="titre"><span class="highlight">Objectif :</span></p>
+<p class="projets-txt">Développer un site web de monitoring pour surveiller les différents aspects d'un serveur, tels que les performances, le réseau, le stockage, les services en cours d'exécution, et les contrôles de serveur. Le but est de permettre une gestion facile et une supervision efficace du serveur grâce à une interface utilisateur claire et des options de contrôle dynamiques.</p>
+
+<p class="titre"><span class="highlight">Détails :</span></p>
+<p class="projets-txt"><span class="highlight">Fonctionalités principales</span></p>
+<p class="projets-txt">Le site web possède plusieurs catégories ( <span class="highlight">Général, Performances, Réseau, Stockage, Services, Contrôle</span> ). Ces catégories possèdent chacune leurs propres fonctionnalités pour gérer différents aspects et afficher des informations en fonction de certains événements. Par exemple, la partie “<span class="highlight">Performance</span>” affiche des informations comme l’utilisation de la ram ou du CPU à l'aide de jauges pour plus de clarté. La page “<span class="highlight">Réseau</span>”, elle,  affiche les informations de chaque carte réseau ainsi que les informations associées par exemple eno1 : 20ms, IP: 192.168.1.50 Masque : 255.255.255.0 DNS : 8.8.8.8 Active. La catégorie “<span class="highlight">Stockage</span>” affiche une jauge ainsi que le pourcentage d’utilisation de chaque disque installé en Go et la catégorie “<span class="highlight">Services</span>” rend compte des différents services actifs sur le serveur et leur statut, par exemple Apache 2 : actif, Apache 2 : en erreur, inactif, etc. Enfin, la partie “<span class="highlight">Contrôle</span>” gère l'arrêt, le démarrage ou le contrôle vpn du serveur via une interface web</p>
+
+
+
+<p class="titre"><span class="highlight">Technologies utilisées</span></p>
+<p class="projets-txt"><span class="highlight">HTML/CSS : </span> pour la structure et le style de l'interface.</p>
+<p class="projets-txt"><span class="highlight">JavaScript : </span>pour les interactions utilisateur et les modifications dynamiques (ex. : gestion du VPN, mise à jour de l'état des liens de navigation actifs).</p>
+<p class="projets-txt"><span class="highlight">PHP : </span>pour gérer la logique côté serveur ( ex. : arrêt/redémarrage du serveur, activation du vpn coté serveur).</p>
+<br>
+<p class="titre"><span class="highlight">Compétences développées :</span>
+    <p class="projets-txt"><span class="highlight">Développement Front-End :</span> Conception d'une interface utilisateur réactive et attrayante en utilisant HTML, CSS et JavaScript.    </p>
+    <p class="projets-txt"><span class="highlight">Gestion de serveur web :</span> Configuration de la navigation, gestion des états des services et développement de contrôles administratifs (ex. : redémarrage de serveur, suivi du stockage).</p>
+    <p class="projets-txt"><span class="highlight">Programmation PHP</span> Création de scripts pour la gestion des éléments interactifs, comme l'activation du VPN.</p>
+    <p class="projets-txt"><span class="highlight">Structuration du CSS :</span> Organisation et gestion des styles CSS pour maintenir une apparence cohérente et ergonomique à travers toutes les pages.</p>
+    <p class="projets-txt"><span class="highlight">Approche modulaire :</span> Développement d'une interface web qui peut être étendue ou modifiée facilement pour ajouter de nouvelles fonctionnalités.</p>
+</p>
+
+
+
+
+<p class="projets-txt">Voici quelques images du projet :</p>
+<br>
+
+<div class="container">
+    <div class="column">
+        <div class="image-container-1">
+            <a onclick="openLightbox('../images/monitoring.png')"><img src="../images/monitoring.png" class="projet-img" style="width: 400px; height: auto;"></a>
+        </div>
+    </div>
+    <div class="column">
+        <div class="image-container-2">
+            <a onclick="openLightbox('../images/monitoring2.png')"><img src="../images/monitoring2.png" class="projet-img" style="width: 400px; height: auto;"></a>
+        </div>
+    </div>
+</div>
+<br>
+
+
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// --> 
+
+    <footer>
+        <div class="logo-uca">
+          <img src="../images/logo-uca.png" alt="Logo UCA"  style="width: 100px;">
+        </div> 
+        <div class="a-moi" style="width: 100px;">
+            <a>Webert Léo 2024-2025 </a>
+        </div>
+        <div class="logo-container">
+          <a href="mailto:leowbrt@gmail.com" target="_blank"><img src="../images/logo-email.png" alt="Logo 1"  style="width: 45px;"></a>
+          <a href="https://www.linkedin.com/in/léo-webert-0671222a9/" target="_blank"><img src="../images/logo-linkedin.png" alt="Logo 2" style="width: 40px;"></a>
+          <a href="https://github.com/leow406" target="_blank"><img src="../images/logo-github.png" alt="Logo 2" style="width: 43px;"></a>
+        </div>
+
+
+      </footer>
+
+</footer>
+
+<div id="lightbox" class="lightbox">
+    <span class="close-btn" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" class="lightbox-img" src="" alt="Image en plein écran">
+</div>
+
+
+    <script src="../script.js" defer></script>
+</body>
+
+</html>
