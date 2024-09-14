@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="styles-home.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap">
+</head>
+
+<body class="fade-in">
+    
+    <header>
+
+        <div class="arrow-indicator"></div>
+        <div id="about"></div>
+        <button class="dropbtn" onclick="window.location.href='../index.html#projects';">Accueil</button>
+    </header>
+    <br>
+    
+    <br>
+
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// --> 
+<h1 class="fade-in">Mes <span class="highlight">projets</span> : Serveur de stockage de fichiers et de gestion de torrents</h1>
+
+<p class="titre"><span class="highlight">Contexte :</span></p>
+<p class="projets-txt">Stocker des fichiers peut devenir contraignant, notamment en termes d'espace et d'accessibilité. Les disques durs externes sont souvent utilisés pour les sauvegardes, mais ils nécessitent d'être physiquement présents. De plus, les solutions de stockage cloud sont souvent payantes pour de grandes quantités de données. Pour résoudre ce problème, j'ai entrepris de créer mon propre serveur de stockage de fichiers.</p>
+
+<p class="titre"><span class="highlight">Objectif :</span></p>
+<p class="projets-txt">L'objectif principal était de disposer d'un espace de stockage accessible de n'importe où, sans dépendre d'un support physique ou de services payants. Pour cela, j'ai récupéré un PC défectueux que j'ai réparé et équipé d'un disque dur de 14 To. En installant Debian et en configurant une adresse IP statique, j'ai facilité l'accès au serveur via SSH. Ensuite, j'ai ajouté un gestionnaire de torrents, en l'occurrence qBittorrent, pour simplifier l'envoi de fichiers. La configuration de l'interface web du gestionnaire de torrents permet un accès facile à distance, avec la sécurisation par un mot de passe robuste.</p>
+
+<p class="titre"><span class="highlight">Compétences développées :</span></p>
+<p class="projets-txt"><span class="highlight">Réparation et configuration matérielle :</span> Récupération et réparation d'un PC défectueux, ajout d'un disque dur supplémentaire.</p>
+<p class="projets-txt"><span class="highlight">Administration système :</span> Installation et configuration de Debian, attribution d'une adresse IP statique.</p>
+<p class="projets-txt"><span class="highlight">Gestion de réseau :</span> Ouverture des ports sur la box pour permettre l'accès à distance.</p>
+<p class="projets-txt"><span class="highlight">Utilisation de logiciels :</span> Installation et configuration de qBittorrent pour la gestion des torrents.</p>
+<p class="projets-txt"><span class="highlight">Sécurité informatique :</span> Ajout de regles IP pour n'autoriser que les IP connues et ajout d'un mot de passe fort pour sécuriser l'accès au serveur.</p>
+<br>
+<p class="projets-txt">Voici quelques images du projet :</p>
+<br>
+
+<div class="container">
+    <div class="column">
+        <div class="image-container-1">
+            <a onclick="openLightbox('../images/webui.png')"><img src="../images/webui.png" class="projet-img" style="width: 400px; height: auto;"></a>
+        </div>
+    </div>
+    <div class="column">
+        <div class="image-container-2">
+            <a onclick="openLightbox('../images/service.png')"><img src="../images/service.png" class="projet-img" style="width: 400px; height: auto;"></a>
+        </div>
+    </div>
+</div>
+<br>
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// --> 
+
+    <footer>
+        <div class="logo-uca">
+          <img src="../images/logo-uca.png" alt="Logo UCA"  style="width: 100px;">
+        </div> 
+        <div class="a-moi" style="width: 100px;">
+            <a>Webert Léo 2024-2025 </a>
+        </div>
+        <div class="logo-container">
+          <a href="mailto:leowbrt@gmail.com" target="_blank"><img src="../images/logo-email.png" alt="Logo 1"  style="width: 45px;"></a>
+          <a href="https://www.linkedin.com/in/léo-webert-0671222a9/" target="_blank"><img src="../images/logo-linkedin.png" alt="Logo 2" style="width: 40px;"></a>
+          <a href="https://github.com/leow406" target="_blank"><img src="../images/logo-github.png" alt="Logo 2" style="width: 43px;"></a>
+        </div>
+
+
+      </footer>
+
+</footer>
+
+<div id="lightbox" class="lightbox">
+    <span class="close-btn" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" class="lightbox-img" src="" alt="Image en plein écran">
+</div>
+
+
+    <script src="../script.js" defer></script>
+</body>
+
+</html>
