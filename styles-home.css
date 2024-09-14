@@ -631,3 +631,82 @@ footer {
 }
 
 
+
+
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement si besoin */
+  gap: 2em;
+  padding: 2em;
+  margin: 0 auto; /* Centre le conteneur lui-même */
+  max-width: 1200px; /* Limite la largeur maximale pour centrer mieux */
+}
+
+.project-card {
+  background-color: #222;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 300px;
+  height: 450px; /* Hauteur fixe pour aligner les cartes */
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(29, 185, 84, 0.2);
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-card h3 {
+  color: #1DB954;
+  padding: 1em;
+  margin: 0;
+}
+
+.project-card p {
+  color: white;
+  padding: 0 1em;
+  margin: 0;
+  flex-grow: 1; /* Permet au texte de prendre l'espace disponible */
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 1em 1em;
+  gap: 0.5em;
+}
+
+.skills span {
+  background-color: #1DB954;
+  color: black;
+  padding: 0.3em 0.6em;
+  border-radius: 15px;
+  font-size: 0.8em;
+}
+
+.more-button {
+  display: block;
+  background-color: #1DB954;
+  color: white;
+  text-align: center;
+  padding: 0.8em;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-top: auto; /* Pousse le bouton vers le bas */
+}
+
+.more-button:hover {
+  background-color: #159442;
+}
