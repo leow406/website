@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap">
 </head>
 
-<body>
+<body class="fade-in">
     
     <header>
 
@@ -53,11 +53,11 @@
 
     <div class="image-container fade-in">
         <p class="moi">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bienvenue sur mon portfolio, je suis actuellement <span
-                class="highlight">étudiant en première année de Bachelor Universitaire Technologique Réseaux et Télécommunications
+                class="highlight">étudiant en deuxieme année de Bachelor Universitaire Technologique Réseaux et Télécommunications
             </span> à Aubière, dans le 63. Je suis passionné d’informatique et de cybersécurité depuis mes
             14ans.
             <br>
-            <br>Je suis actuellement en recherche d'alternance
+            <br>Je suis actuellement en <span class="highlight">recherche d'alternance</span>
             <br>  
             <br>
             <span class="highlight">Scrollez</span> un peu pour en apprendre plus sur moi
@@ -78,7 +78,9 @@
     <input id="q9" type="checkbox" class="depliant" checked>
     <div class="plus"><span class="highlight">+ </span></div>
     <label for="q9" class="depliant-title">Bachelor Universitaire et Technologique Réseaux et télécommunications (Aubière, dans le 63)</label>
-    <div class="depliant-content">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Année 1 : <span class="highlight">En cours ...</span></div>
+    <div class="depliant-content">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Année 1 : <span class="highlight">Acquise</span></div>
+    <div class="depliant-content">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Année 2 : <span class="highlight">En cours ...</span></div>
+
 </div>
 
 
@@ -108,8 +110,8 @@
     <div id="experience"></div>
     <h1 class="fade-in">Mes <span class="highlight">experiences</span> professionnelles</h1>
     <p class="pro-exp"></p>
-    <p class="titre"><span class="highlight"><b>Trivium Packaging, 54000 Nancy</b></span></p>
-    <p class="experience-txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pendant les vacances d'été de 2023, j'ai eu
+    <p class="titre"><span class="highlight"><b>Trivium Packaging, 54000 Nancy (été 2023 / 2024 )</b></span></p>
+    <p class="experience-txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pendant les vacances d'été de 2023 / 2024, j'ai eu
         l'opportunité de travailler chez Trivium Packaging. J'ai effectué cette mission pendant une durée de <span
             class="highlight">5 semaines, dont 3 en travail de nuit</span>. Cette expérience m'a offert un aperçu du
         monde professionnel et de ses codes.</p>
@@ -151,7 +153,7 @@
         <div class="depliant-content">CSS<div id="barreChargement">
                 <div id="progression90"></div>
             </div><span class="pourcentage">90%</span></div>
-        <div class="depliant-content">Bach<div id="barreChargement">
+        <div class="depliant-content">bash<div id="barreChargement">
                 <div id="progression70"></div>
             </div><span class="pourcentage">70%</span></div>
         <div class="depliant-content">PHP<div id="barreChargement">
@@ -264,75 +266,87 @@
     </div>
 
 <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// --> 
-<div id="projects"></div>
-<h1 class="fade-in">Mes <span class="highlight">projets</span></h1>
-<p class="titre"><span class="highlight" style="text-decoration: underline;">ProxySwitcher</span></p>
 
-<p class="titre"><span class="highlight">Contexte :</span>
-<p class="projets-txt">Au lycée, l'accès aux connexions Linux était régulièrement bloqué, posant des difficultés pour travailler efficacement. Pour résoudre ce 
-    problème, j'ai entrepris de développer un script permettant de contourner les restrictions du proxy qui rejetaient les connexions.
-</p>
-<p class="titre"><span class="highlight">Objectif :</span>
-<p class="projets-txt">L'objectif principal était de simplifier le processus de basculement entre mon réseau personnel et celui du lycée en évitant de devoir 
-    reconfigurer manuellement le proxy à chaque fois. Le script devait permettre de saisir l'adresse IP et le port du proxy lors de la première connexion, 
-    tout en offrant la flexibilité de modifier ces paramètres à tout moment. De plus, les données devaient être enregistrées dans un fichier pour une utilisation 
-    ultérieure.
-</p>
-<p class="titre"><span class="highlight">Compétences développées :</span>
-<p class="projets-txt"><span class="highlight">Programmation :</span> Développement d'un script pour gérer les paramètres de proxy.</p>
-<p class="projets-txt"><span class="highlight">Analyse réseau :</span> Utilisation de Wireshark pour identifier l'adresse IP et le port du proxy.</p>
-<p class="projets-txt"><span class="highlight">Gestion de fichiers :</span> Enregistrement et récupération des données dans un fichier texte depuis un script.</p>
-</p>
-
-<br>
-<p class="projets-txt">Voici quelques images du projet :</p>
-<br>
-
-<div class="container">
-    <div class="column">
-        <div class="image-container-1">
-            <a onclick="openLightbox('images/ProxySwitcher.png')"><img src="images/ProxySwitcher2.png" class="projet-img" style="width: 400px; height: auto;"></a>
+<div id="projects">
+    <h1 class="fade-in">Mes <span class="highlight">projets</span></h1>
+    <div class="projects-container">
+      <div class="project-card">
+        <img src="images/ProxySwitcher2.png" alt="ProxySwitcher" class="project-image">
+        <h3>ProxySwitcher</h3>
+        <p>Script pour contourner les restrictions du proxy au lycée.</p>
+        <div class="skills">
+          <span>Programmation</span>
+          <span>Sécurité informatique</span>
+          <span>Analyse réseau</span>
+          <span>Gestion de fichiers</span>
         </div>
-    </div>
-    <div class="column">
-        <div class="image-container-2">
-            <a onclick="openLightbox('images/ProxySwitcher2.png')"><img src="images/ProxySwitcher.png" class="projet-img" style="width: 400px; height: auto;"></a>
+        <a href="projects/proxyswitcher.html" class="more-button">Afficher plus</a>
+
+      </div>
+
+      <div class="project-card">
+        <img src="images/webui.png" alt="Serveur de stockage" class="project-image">
+        <h3>Serveur de stockage</h3>
+        <p>Serveur de stockage de fichiers et gestion de torrents.</p>
+        <div class="skills">
+          <span>Administration système</span>
+          <span>Gestion de réseau</span>
+          <span>Sécurité informatique</span>
         </div>
-    </div>
-</div>
+        <a href="projects/serveur-stockage.html" class="more-button">Afficher plus</a>
 
-<br>
+      </div>
 
-<p class="titre"><span class="highlight" style="text-decoration: underline;">Serveur de stockage de fichiers et de gestion de torrents</span></p>
+      <div class="project-card">
+        <img src="images/sae24.png" alt="sae24" class="project-image">
+        <h3>Projet Intégratif</h3>
+        <p>Mise en pratique d'une solution complete</p>
+        <div class="skills">
+          <span>Web</span>
+          <span>Programmation</span>
+          <span>Gestion de réseau</span>
+          <span>Gestion d'utilisateurs</span>
+          <span>Sécurité informatique</span>
 
-<p class="titre"><span class="highlight">Contexte :</span></p>
-<p class="projets-txt">Stocker des fichiers peut devenir contraignant, notamment en termes d'espace et d'accessibilité. Les disques durs externes sont souvent utilisés pour les sauvegardes, mais ils nécessitent d'être physiquement présents. De plus, les solutions de stockage cloud sont souvent payantes pour de grandes quantités de données. Pour résoudre ce problème, j'ai entrepris de créer mon propre serveur de stockage de fichiers.</p>
-
-<p class="titre"><span class="highlight">Objectif :</span></p>
-<p class="projets-txt">L'objectif principal était de disposer d'un espace de stockage accessible de n'importe où, sans dépendre d'un support physique ou de services payants. Pour cela, j'ai récupéré un PC défectueux que j'ai réparé et équipé d'un disque dur de 2 To. En installant Ubuntu et en configurant une adresse IP statique, j'ai facilité l'accès au serveur via SSH. Ensuite, j'ai ajouté un gestionnaire de torrents, en l'occurrence qBittorrent, pour simplifier l'envoi de fichiers. La configuration de l'interface web du gestionnaire de torrents permet un accès facile à distance, avec la sécurisation par un mot de passe robuste.</p>
-
-<p class="titre"><span class="highlight">Compétences développées :</span></p>
-<p class="projets-txt"><span class="highlight">Réparation et configuration matérielle :</span> Récupération et réparation d'un PC défectueux, ajout d'un disque dur supplémentaire.</p>
-<p class="projets-txt"><span class="highlight">Administration système :</span> Installation et configuration d'Ubuntu, attribution d'une adresse IP statique.</p>
-<p class="projets-txt"><span class="highlight">Gestion de réseau :</span> Ouverture des ports sur la box pour permettre l'accès à distance.</p>
-<p class="projets-txt"><span class="highlight">Utilisation de logiciels :</span> Installation et configuration de qBittorrent pour la gestion des torrents.</p>
-<p class="projets-txt"><span class="highlight">Sécurité informatique :</span> Ajout de regles IP pour n'autoriser que les IP connues et ajout d'un mot de passe fort pour sécuriser l'accès au serveur.</p>
-<br>
-<p class="projets-txt">Voici quelques images du projet :</p>
-<br>
-
-<div class="container">
-    <div class="column">
-        <div class="image-container-1">
-            <a onclick="openLightbox('images/webui.png')"><img src="images/webui.png" class="projet-img" style="width: 400px; height: auto;"></a>
         </div>
+        <a href="projects/sae24.html" class="more-button">Afficher plus</a>
+
     </div>
-    <div class="column">
-        <div class="image-container-2">
-            <a onclick="openLightbox('images/service.png')"><img src="images/service.png" class="projet-img" style="width: 400px; height: auto;"></a>
-        </div>
+
+    <div class="project-card">
+      <img src="images/sae23.png" alt="sae23" class="project-image">
+      <h3>Application de gestion de tickets</h3>
+      <p>Mise place d'une solution de ticketing</p>
+      <div class="skills">
+        <span>Web</span>
+        <span>Programmation</span>
+        <span>Base de données</span>
+        <span>Gestion d'utilisateurs</span>
+      </div>
+      <a href="projects/sae23.html" class="more-button">Afficher plus</a>
+
     </div>
-</div>
+
+    <div class="project-card">
+      <img src="images/monitoring.png" alt="monitoring" class="project-image">
+      <h3>Site web de monitoring</h3>
+      <p>Mise en place d'un site web de monitoring pour de serveur</p>
+      <div class="skills">
+        <span>Web</span>
+        <span>Programmation </span>
+        <span>Gestion de réseau</span>
+        <span>Gestion de fichiers</span>
+        <span>Sécurité informatique</span>
+
+      </div>
+      <a href="projects/monitoring.html" class="more-button">Afficher plus</a>
+      
+    </div>
+  </div>
+
+
+
+
 
 
 <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// --> 
@@ -341,6 +355,7 @@
     <h1 class="fade-in"><span class="highlight">Divers</span></h1>
     <p class="titre">Centres d'intérêt :</p>
     <p class="divers-txt"><span class="highlight">Informatique :</span> J’aime bricoler des ordinateurs, comprendre comment ils fonctionnent et en monter moi meme</p>
+    <p class="divers-txt"><span class="highlight">Pentest :</span> Je m'entraîne régulièrement à effectuer des tests d'intrusion sur des machines prévues a cet effet ou en participant a des "Captures de drapeaux" comme avec Rootme par exemple</p>
     <p class="divers-txt"><span class="highlight">Piano :</span> Je pratique le piano assez régulièrement, et j’ai pu apprendre les bases du solfège et quelques musiques en autodidacte comme Wet Hands de C418, Imagine de John Lennon ou encore Experience de Ludivico Einaudi.</p>
     <p class="divers-txt"><span class="highlight">Photographie :</span> Je pratique régulièrement de la photographie avec un appareil photo professionnel. Je photographie la nature, mon chien 
         et des lieux de nuit ou abandonnés. En voici quelques unes :
@@ -409,7 +424,7 @@
         <div class="logo-container">
           <a href="mailto:leowbrt@gmail.com" target="_blank"><img src="images/logo-email.png" alt="Logo 1"  style="width: 45px;"></a>
           <a href="https://www.linkedin.com/in/léo-webert-0671222a9/" target="_blank"><img src="images/logo-linkedin.png" alt="Logo 2" style="width: 40px;"></a>
-          <a href="what's-app.pdf" target="_blank"><img src="images/logo-wapp.png" alt="Logo 2" style="width: 43px;"></a>
+          <a href="https://github.com/leow406" target="_blank"><img src="images/logo-github.png" alt="github" style="width: 43px;"></a>
         </div>
 
 
