@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="styles-home.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap">
+</head>
+
+<body class="fade-in">
+    
+    <header>
+        <div class="arrow-indicator"></div>
+        <div id="about"></div>
+        <button class="dropbtn" onclick="window.location.href='../index.html#projects';">Home</button>
+    </header>
+    <br>
+    <br>
+
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// --> 
+<h1 class="fade-in">My <span class="highlight">Projects</span>: File Storage and Torrent Management Server</h1>
+
+<p class="titre"><span class="highlight">Context:</span></p>
+<p class="projets-txt">Storing files can become cumbersome, especially in terms of space and accessibility. External hard drives are often used for backups, but they require physical presence. Additionally, cloud storage solutions are often costly for large amounts of data. To solve this problem, I decided to create my own file storage server.</p>
+
+<p class="titre"><span class="highlight">Objective:</span></p>
+<p class="projets-txt">The primary objective was to have storage space accessible from anywhere, without relying on physical media or paid services. To achieve this, I repurposed a defective PC that I repaired and equipped with a 14 TB hard drive. By installing Debian and configuring a static IP address, I made the server accessible via SSH. Additionally, I installed a torrent manager, specifically qBittorrent, to simplify file uploads. The configuration of the web interface for the torrent manager allows easy remote access, secured with a strong password.</p>
+
+<p class="titre"><span class="highlight">Skills Developed:</span></p>
+<p class="projets-txt"><span class="highlight">Hardware Repair and Configuration:</span> Recovering and repairing a defective PC, adding an extra hard drive.</p>
+<p class="projets-txt"><span class="highlight">System Administration:</span> Installing and configuring Debian, assigning a static IP address.</p>
+<p class="projets-txt"><span class="highlight">Network Management:</span> Opening ports on the router to allow remote access.</p>
+<p class="projets-txt"><span class="highlight">Software Usage:</span> Installing and configuring qBittorrent for torrent management.</p>
+<p class="projets-txt"><span class="highlight">Cybersecurity:</span> Adding IP rules to allow only known IPs and securing server access with a strong password.</p>
+<br>
+<p class="projets-txt">Here are some images of the project:</p>
+<br>
+
+<div class="container">
+    <div class="column">
+        <div class="image-container-1">
+            <a onclick="openLightbox('../images/webui.png')"><img src="../images/webui.png" class="projet-img" style="width: 400px; height: auto;"></a>
+        </div>
+    </div>
+    <div class="column">
+        <div class="image-container-2">
+            <a onclick="openLightbox('../images/service.png')"><img src="../images/service.png" class="projet-img" style="width: 400px; height: auto;"></a>
+        </div>
+    </div>
+</div>
+<br>
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// --> 
+
+<footer>
+    <div class="logo-uca">
+      <img src="../images/logo-uca.png" alt="UCA Logo" style="width: 100px;">
+    </div> 
+    <div class="a-moi" style="width: 100px;">
+        <a>Webert Léo 2024-2025</a>
+    </div>
+    <div class="logo-container">
+      <a href="mailto:leowbrt@gmail.com" target="_blank"><img src="../images/logo-email.png" alt="Email Logo" style="width: 45px;"></a>
+      <a href="https://www.linkedin.com/in/léo-webert-0671222a9/" target="_blank"><img src="../images/logo-linkedin.png" alt="LinkedIn Logo" style="width: 40px;"></a>
+      <a href="https://github.com/leow406" target="_blank"><img src="../images/logo-github.png" alt="GitHub Logo" style="width: 43px;"></a>
+    </div>
+</footer>
+
+<div id="lightbox" class="lightbox">
+    <span class="close-btn" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" class="lightbox-img" src="" alt="Full-Screen Image">
+</div>
+
+<script src="../script.js" defer></script>
+</body>
+
+</html>

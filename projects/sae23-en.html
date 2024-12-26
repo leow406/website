@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="styles-home.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap">
+</head>
+
+<body class="fade-in">
+    
+    <header>
+        <div class="arrow-indicator"></div>
+        <div id="about"></div>
+        <button class="dropbtn" onclick="window.location.href='../index.html#projects';">Home</button>
+    </header>
+    <br>
+    <br>
+
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// --> 
+<h1>My <span class="highlight">Projects</span>: Ticketing Solution</h1>
+
+<p class="titre"><span class="highlight">Context:</span>
+<p class="projets-txt">In the context of an <span class="highlight">SAE</span><img src="../images/help.png" title="SAE or Learning and Assessment Situation is a set of tasks assigned to students to achieve a specific goal" class="help-icon">, the university faced a need for efficient management of IT support requests within its IT Department (DSI - Direction des Systèmes d'Information). To address this requirement, a project was initiated to <span class="highlight">develop a web-based ticketing management system</span>. This website would allow users to report issues, track their status, and resolve them transparently. The system administrator could manage tickets based on their priority and impact.</p>
+
+<p class="titre"><span class="highlight">Objective:</span>
+<p class="projets-txt">The main goal of this project is to design and <span class="highlight">deploy a full-stack ticket management application</span> using <span class="highlight">Node.js</span> and <span class="highlight">MongoDB</span> as the database. The application must provide multiple features such as ticket creation, tracking, and deletion by users, management and classification of tickets by administrators, the ability to assign technicians, and converting private tickets to public tickets to help other users facing similar issues. <span class="highlight">The system must be robust, scalable, and user-friendly</span> to ensure smooth handling of requests.</p>
+
+<p class="titre"><span class="highlight">Skills Developed:</span>
+    <p class="projets-txt"><span class="highlight">Full-Stack Programming:</span> Using Node.js for server-side logic and MongoDB for data management.</p>
+    <p class="projets-txt"><span class="highlight">User and Role Management:</span> Implementing a ticketing system with different access levels (users, administrators, technicians).</p>
+    <p class="projets-txt"><span class="highlight">Web Architecture:</span> Developing a complete architecture for both server and client sides.</p>
+    <p class="projets-txt"><span class="highlight">Technologies:</span> Familiarizing with tools such as Express.js, MongoDB, and Node.js to build REST APIs and real-time applications.</p>
+
+<p class="projets-txt">Here are some images of the project:</p>
+<br>
+
+<div class="container">
+    <div class="column">
+        <div class="image-container-1">
+            <a onclick="openLightbox('../images/sae23.png')"><img src="../images/sae23.png" class="projet-img" style="width: 400px; height: auto;"></a>
+        </div>
+    </div>
+    <div class="column">
+        <div class="image-container-2">
+            <a onclick="openLightbox('../images/sae23_2.png')"><img src="../images/sae23_2.png" class="projet-img" style="width: 400px; height: auto;"></a>
+        </div>
+    </div>
+</div>
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// --> 
+
+<footer>
+    <div class="logo-uca">
+      <img src="../images/logo-uca.png" alt="UCA Logo" style="width: 100px;">
+    </div> 
+    <div class="a-moi" style="width: 100px;">
+        <a>Webert Léo 2024-2025</a>
+    </div>
+    <div class="logo-container">
+      <a href="mailto:leowbrt@gmail.com" target="_blank"><img src="../images/logo-email.png" alt="Email Logo" style="width: 45px;"></a>
+      <a href="https://www.linkedin.com/in/léo-webert-0671222a9/" target="_blank"><img src="../images/logo-linkedin.png" alt="LinkedIn Logo" style="width: 40px;"></a>
+      <a href="https://github.com/leow406" target="_blank"><img src="../images/logo-github.png" alt="GitHub Logo" style="width: 43px;"></a>
+    </div>
+</footer>
+
+<div id="lightbox" class="lightbox">
+    <span class="close-btn" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" class="lightbox-img" src="" alt="Full-Screen Image">
+</div>
+
+<script src="../script.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="styles-home.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap">
+</head>
+
+<body class="fade-in">
+    
+    <header>
+        <div class="arrow-indicator"></div>
+        <div id="about"></div>
+        <button class="dropbtn" onclick="window.location.href='../index.html#projects';">Home</button>
+    </header>
+
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// --> 
+<div id="projects"></div>
+<h1 class="fade-in">My <span class="highlight">Projects</span>: Proxy Switcher</h1>
+<p class="titre"><span class="highlight" style="text-decoration: underline;">ProxySwitcher</span></p>
+
+<p class="titre"><span class="highlight">Context:</span>
+<p class="projets-txt">At school, access to Linux connections was frequently blocked, making it difficult to work efficiently. To address this issue, I developed a script to bypass proxy restrictions that rejected connections.</p>
+
+<p class="titre"><span class="highlight">Objective:</span>
+<p class="projets-txt">The main objective was to simplify the process of switching between my personal network and the school network without having to manually reconfigure the proxy each time. The script was designed to allow entering the proxy's IP address and port during the first connection, while also offering the flexibility to modify these parameters at any time. Additionally, the data needed to be saved in a file for future use.</p>
+
+<p class="titre"><span class="highlight">Skills Developed:</span>
+<p class="projets-txt"><span class="highlight">Programming:</span> Developing a script to manage proxy settings.</p>
+<p class="projets-txt"><span class="highlight">Network Analysis:</span> Using Wireshark to identify the proxy's IP address and port.</p>
+<p class="projets-txt"><span class="highlight">File Management:</span> Saving and retrieving data from a text file via a script.</p>
+</p>
+
+<br>
+<p class="projets-txt">Here are some images of the project:</p>
+<br>
+
+<div class="container">
+    <div class="column">
+        <div class="image-container-1">
+            <a onclick="openLightbox('../images/ProxySwitcher.png')"><img src="../images/ProxySwitcher2.png" class="projet-img" style="width: 400px; height: auto;"></a>
+        </div>
+    </div>
+    <div class="column">
+        <div class="image-container-2">
+            <a onclick="openLightbox('../images/ProxySwitcher2.png')"><img src="../images/ProxySwitcher.png" class="projet-img" style="width: 400px; height: auto;"></a>
+        </div>
+    </div>
+</div>
+<br>
+
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// --> 
+
+<footer>
+    <div class="logo-uca">
+      <img src="../images/logo-uca.png" alt="UCA Logo" style="width: 100px;">
+    </div> 
+    <div class="a-moi" style="width: 100px;">
+        <a>Webert Léo 2024-2025</a>
+    </div>
+    <div class="logo-container">
+      <a href="mailto:leowbrt@gmail.com" target="_blank"><img src="../images/logo-email.png" alt="Email Logo" style="width: 45px;"></a>
+      <a href="https://www.linkedin.com/in/léo-webert-0671222a9/" target="_blank"><img src="../images/logo-linkedin.png" alt="LinkedIn Logo" style="width: 40px;"></a>
+      <a href="https://github.com/leow406" target="_blank"><img src="../images/logo-github.png" alt="GitHub Logo" style="width: 43px;"></a>
+    </div>
+</footer>
+
+<div id="lightbox" class="lightbox">
+<span class="close-btn" onclick="closeLightbox()">&times;</span>
+<img id="lightbox-img" class="lightbox-img" src="" alt="Full-Screen Image">
+</div>
+
+<script src="../script.js" defer></script>
+</body>
+
+</html>

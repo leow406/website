@@ -405,7 +405,7 @@ border-radius: 10px;
 }
 
 .download-button:hover .button-text::before {
-  content: "Click to download";
+  content: "Click here to download";
   animation: fadeInAnimation 1s ease-in-out forwards;
 }
 
@@ -426,22 +426,22 @@ border-radius: 10px;
 
 /* Barre de progression */
 #barreChargement {
-  width: 300px;
-  height: 20px;
-  background-color: #333;
-  border-radius: 10px;
-  overflow: hidden;
-  margin-left: 17em;
-  margin-right: 1em;
-  position: absolute;
-  top: 0.9em; 
-  left: 0em; 
+width: 300px;
+height: 20px;
+background-color: #333;
+border-radius: 10px;
+overflow: hidden;
+margin-left: 17em;
+margin-right: 1em;
+position: absolute;
+top: 0.9em; 
+left: 0em; 
 }
 
 #progression100, #progression95, #progression90, #progression85, #progression80, #progression70, #progression60 {
-  height: 100%;
-  background-color: #1DB954;
-  transition: width 0.3s ease;
+height: 100%;
+background-color: #1DB954;
+transition: width 0.3s ease;
 }
 
 #progression100 { width: 100%; }
@@ -453,89 +453,89 @@ border-radius: 10px;
 #progression60 { width: 60%; }
 
 #barreChargement:hover, #barreChargement:hover #progression {
-  box-shadow: 0 0 10px rgba(29, 185, 84, 1);
-  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+box-shadow: 0 0 10px rgba(29, 185, 84, 1);
+transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
 }
 
 .pourcentage {
-  position: absolute;
-  left: 34em;
+position: absolute;
+left: 34em;
 }
 
 /* Competences */ 
 .depliant-title {
-  font-size: 30px;
-  width: 100%;
-  position: relative;
-  margin: 0;
-  padding: 10px 10px 0 48px;
-  display: block;
-  cursor: pointer; /* Indicates clickable */
-  color: #ffffff;
-  font-family: 'Ubuntu', sans-serif;
-  margin-right: 1em;
+font-size: 30px;
+width: 100%;
+position: relative;
+margin: 0;
+padding: 10px 10px 0 48px;
+display: block;
+cursor: pointer; /* Indicates clickable */
+color: #ffffff;
+font-family: 'Ubuntu', sans-serif;
+margin-right: 1em;
 }
 
 .depliant-content {
-  font-size: 20px;
-  padding: 0px 14px;
-  margin: 0 40px;
-  height: 0;
-  overflow: hidden;
-  z-index: -1;
-  position: relative;
-  opacity: 0;
-  color: #ffffff;
-  font-family: 'Ubuntu', sans-serif;
-  transition: .4s ease;
-  cursor: pointer; /* Indicates clickable */
-  margin-right: 1em;
+font-size: 20px;
+padding: 0px 14px;
+margin: 0 40px;
+height: 0;
+overflow: hidden;
+z-index: -1;
+position: relative;
+opacity: 0;
+color: #ffffff;
+font-family: 'Ubuntu', sans-serif;
+transition: .4s ease;
+cursor: pointer; /* Indicates clickable */
+margin-right: 1em;
 }
 
 .depliant:checked ~ .depliant-content {
-  height: auto;
-  opacity: 1;
-  padding: 14px;
-  color: #ffffff;
-  margin-right: 1em;
+height: auto;
+opacity: 1;
+padding: 14px;
+color: #ffffff;
+margin-right: 1em;
 }
 
 .plus {
-  position: absolute;
-  margin-top: 4px;
-  z-index: 1;
-  font-size: 42px;
-  line-height: 100%;
-  user-select: none;
-  transition: .2s ease;
-  color: white;
-  cursor: pointer; /* Indicates clickable */
-  margin-left: 2.2em;
-  margin-right: 1em;
+position: absolute;
+margin-top: 4px;
+z-index: 1;
+font-size: 42px;
+line-height: 100%;
+user-select: none;
+transition: .2s ease;
+color: white;
+cursor: pointer; /* Indicates clickable */
+margin-left: 2.2em;
+margin-right: 1em;
 }
 
 .depliant:checked ~ .plus {
-  transform: rotate(45deg);
-  margin-right: 1em;
+transform: rotate(45deg);
+margin-right: 1em;
 }
 
 .depliant {
-  display: none;
-  margin-right: 1em;
+display: none;
+margin-right: 1em;
 }
 
 .depliant-title {
-  color: #ffffff;
-  font-family: 'Ubuntu', sans-serif;
-  margin-left: 2.5em;
-  margin-right: 1em;
+color: #ffffff;
+font-family: 'Ubuntu', sans-serif;
+margin-left: 2.5em;
+margin-right: 1em;
 }
 
 .depliant-content {
-  color: #ffffff;
-  font-family: 'Ubuntu', sans-serif;
-  margin-left: 5.5em;
-  margin-right: 5.5em;
+color: #ffffff;
+font-family: 'Ubuntu', sans-serif;
+margin-left: 5.5em;
+margin-right: 5.5em;
 }
 
 
@@ -621,13 +621,92 @@ cursor: pointer;
 
 
 .help-icon {
-  margin-left: 5px;
-  cursor: pointer;
-  height: 20px;
-  width: auto;
-  filter: brightness(0) invert(1); /* Change la couleur de l'icône en blanc */
-  position: relative; /* Permet de positionner l'icône */
-  top: -20px; /* Surélevé de 20px */
+margin-left: 5px;
+cursor: pointer;
+height: 20px;
+width: auto;
+filter: brightness(0) invert(1); /* Change la couleur de l'icône en blanc */
+position: relative; /* Permet de positionner l'icône */
+top: -20px; /* Surélevé de 20px */
 }
 
 
+
+
+
+.projects-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: center; /* Centre horizontalement */
+align-items: center; /* Centre verticalement si besoin */
+gap: 2em;
+padding: 2em;
+margin: 0 auto; /* Centre le conteneur lui-même */
+max-width: 1200px; /* Limite la largeur maximale pour centrer mieux */
+}
+
+.project-card {
+background-color: #222;
+border-radius: 10px;
+overflow: hidden;
+width: 300px;
+height: 450px; /* Hauteur fixe pour aligner les cartes */
+display: flex;
+flex-direction: column;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 6px 12px rgba(29, 185, 84, 0.2);
+}
+
+.project-image {
+width: 100%;
+height: 200px;
+object-fit: cover;
+}
+
+.project-card h3 {
+color: #1DB954;
+padding: 1em;
+margin: 0;
+}
+
+.project-card p {
+color: white;
+padding: 0 1em;
+margin: 0;
+flex-grow: 1; /* Permet au texte de prendre l'espace disponible */
+}
+
+.skills {
+display: flex;
+flex-wrap: wrap;
+padding: 0 1em 1em;
+gap: 0.5em;
+}
+
+.skills span {
+background-color: #1DB954;
+color: black;
+padding: 0.3em 0.6em;
+border-radius: 15px;
+font-size: 0.8em;
+}
+
+.more-button {
+display: block;
+background-color: #1DB954;
+color: white;
+text-align: center;
+padding: 0.8em;
+text-decoration: none;
+transition: background-color 0.3s ease;
+margin-top: auto; /* Pousse le bouton vers le bas */
+}
+
+.more-button:hover {
+background-color: #159442;
+}

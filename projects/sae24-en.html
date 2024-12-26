@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="styles-home.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap">
+</head>
+
+<body class="fade-in">
+    
+    <header>
+        <div class="arrow-indicator"></div>
+        <div id="about"></div>
+        <button class="dropbtn" onclick="window.location.href='../index.html#projects';">Home</button>
+    </header>
+    <br>
+    <br>
+
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// --> 
+<h1>My <span class="highlight">Projects</span>: Integrative Project</h1>
+
+<p class="titre"><span class="highlight">Context:</span>
+<p class="projets-txt">As part of the <span class="highlight">SAE 24</span><img src="../images/help.png" title="SAE or Learning and Assessment Situation is a set of tasks assigned to students to achieve a specific goal" class="help-icon"> project, the objective is to design and <span class="highlight">implement the network infrastructure</span> for a small company composed of several departments (finance, HR, technical). This infrastructure must enable secure communication between different departments using VLANs while ensuring internet connectivity for client workstations. A central server will be deployed to manage <span class="highlight">several critical services such as DHCP, FTP, and a web server</span>.</p>
+
+<p class="titre"><span class="highlight">Objective:</span>
+<p class="projets-txt">The project involves designing a <span class="highlight">complete network infrastructure</span>, integrating a <span class="highlight">switch, VLANs, a router</span>, and a <span class="highlight">WiFi network</span>, to enable smooth and secure communication between the company's departments. A Windows server equipped with <span class="highlight">Active Directory</span> will be deployed alongside a <span class="highlight">Linux server</span> and a <span class="highlight">telephony server</span> to ensure centralized resource management. Additionally, a web server will be configured to present the infrastructure and document potential security threats, such as DHCP attacks. This server will also provide countermeasures to prevent attacks like DHCP starvation and DHCP spoofing. A dynamic PHP interface will be developed on this server, enabling, among other things, <span class="highlight">user authentication</span> and script execution to automate certain tasks.
+The project also includes <span class="highlight">attack testing</span> and demonstrating countermeasures implemented to <span class="highlight">secure the infrastructure.</span>
+</p>
+
+<p class="titre"><span class="highlight">Skills Developed:</span>
+    <p class="projets-txt"><span class="highlight">Network Configuration:</span> Setting up and managing VLANs, a DHCP server, and IP connectivity.</p>
+    <p class="projets-txt"><span class="highlight">Network Security:</span> Preventing DHCP attacks (rogue DHCP and starvation).</p>
+    <p class="projets-txt"><span class="highlight">System Administration:</span> Deploying Windows and Linux servers with critical services (Active Directory, FTP server, etc.).</p>
+    <p class="projets-txt"><span class="highlight">Web Development:</span> Creating dynamic web pages with PHP for administration and documentation.</p>    
+    <p class="projets-txt"><span class="highlight">Project Management:</span> Task scheduling, teamwork, and managing equipment (switch, router, firewall, etc.).</p>    
+    <br>
+    <p class="projets-txt">Here are some images of the project:</p>
+    <br>
+    
+    <div class="container">
+        <div class="column">
+            <div class="image-container-1">
+                <a onclick="openLightbox('../images/sae24.png')"><img src="../images/sae24.png" class="projet-img" style="width: 400px; height: auto;"></a>
+            </div>
+        </div>
+        <div class="column">
+            <div class="image-container-2">
+                <a onclick="openLightbox('../images/sae24-2.png')"><img src="../images/sae24-2.png" class="projet-img" style="width: 400px; height: auto;"></a>
+            </div>
+        </div>
+    </div>
+    <br>
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// --> 
+
+<footer>
+    <div class="logo-uca">
+      <img src="../images/logo-uca.png" alt="UCA Logo" style="width: 100px;">
+    </div> 
+    <div class="a-moi" style="width: 100px;">
+        <a>Webert Léo 2024-2025</a>
+    </div>
+    <div class="logo-container">
+      <a href="mailto:leowbrt@gmail.com" target="_blank"><img src="../images/logo-email.png" alt="Email Logo" style="width: 45px;"></a>
+      <a href="https://www.linkedin.com/in/léo-webert-0671222a9/" target="_blank"><img src="../images/logo-linkedin.png" alt="LinkedIn Logo" style="width: 40px;"></a>
+      <a href="https://github.com/leow406" target="_blank"><img src="../images/logo-github.png" alt="GitHub Logo" style="width: 43px;"></a>
+    </div>
+</footer>
+
+<div id="lightbox" class="lightbox">
+    <span class="close-btn" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" class="lightbox-img" src="" alt="Full-Screen Image">
+</div>
+
+<script src="../script.js" defer></script>
+</body>
+
+</html>
