@@ -9,38 +9,39 @@ blanc : white
 */
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 .fade-in {
-    opacity: 0;
-    animation: fadeInAnimation 1s ease-in-out forwards;
+  opacity: 0;
+  animation: fadeInAnimation 1s ease-in-out forwards;
 }
 
 @keyframes fadeInAnimation {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .fade-in {
-    opacity: 0;
+  opacity: 0;
 }
 
 
 body {
-    background: #191414;
-    margin: 0;
-    padding: 0;
-    font-family: 'Ubuntu', sans-serif;
-    overflow-x: hidden;
+  background: #191414;
+  margin: 0;
+  padding: 0;
+  font-family: 'Ubuntu', sans-serif;
+  overflow-x: hidden;
 }
 
 header {
-    background: #191414;
+  background: #191414;
 }
 
 .navbar {
@@ -104,13 +105,17 @@ header {
   border: none;
   position: relative;
   z-index: 1001;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Ajout de la transition pour le hover */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  /* Ajout de la transition pour le hover */
 }
 
 .dropbtn:hover {
-  background-color: #1AAE48; /* Couleur légèrement plus sombre au survol */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre portée douce */
-  cursor: pointer; /* Changement de curseur pour indiquer que c'est cliquable */
+  background-color: #1AAE48;
+  /* Couleur légèrement plus sombre au survol */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Ombre portée douce */
+  cursor: pointer;
+  /* Changement de curseur pour indiquer que c'est cliquable */
 }
 
 
@@ -120,67 +125,69 @@ header {
 /* page */
 
 .highlight {
-    color: #1DB954; /* highlight en vert */
+  color: #1DB954;
+  /* highlight en vert */
 }
+
 h1 {
-    font-size: 4em;
-    color: white;
-    margin-left: 1.5em;
-    margin-top: 1.5em;
-    bottom: 0.5em;
-    top: 0.5em;
+  font-size: 4em;
+  color: white;
+  margin-left: 1.5em;
+  margin-top: 1.5em;
+  bottom: 0.5em;
+  top: 0.5em;
 
 }
 
 .profile-picture {
-    margin-top: 20px;
-    width: auto;
-    height: 400px;
-    margin-left: 100px;
-    position: absolute;
-    top: 30em;
-    left: 15em; 
-    transform: translateX(-50%);
+  margin-top: 20px;
+  width: auto;
+  height: 400px;
+  margin-left: 100px;
+  position: absolute;
+  top: 30em;
+  left: 15em;
+  transform: translateX(-50%);
 }
 
 
 
 .moi {
-    color: white;
-    margin-top: 3em;
-    margin-right: 4em;
-    margin-left: 28em; 
-    font-size: 1.5em;
-    text-align: left;
+  color: white;
+  margin-top: 3em;
+  margin-right: 4em;
+  margin-left: 28em;
+  font-size: 1.5em;
+  text-align: left;
 }
 
 .cv {
-    color: white;
-    margin-right: 10em;
-    margin-left: 10em; 
-    font-size: 1.5em;
-    text-align: center;
+  color: white;
+  margin-right: 10em;
+  margin-left: 10em;
+  font-size: 1.5em;
+  text-align: center;
 }
 
 .me-contacter {
-    color: white;
-    margin-right: 10em;
-    margin-left: 10em; 
-    font-size: 1.5em;
-    text-align: center;
+  color: white;
+  margin-right: 10em;
+  margin-left: 10em;
+  font-size: 1.5em;
+  text-align: center;
 }
 
 
 
 .experience-txt {
-    color: white;
-    font-size: 1.5em;
-    text-align: left;
-    margin-left: 4em;
-    margin-right: 4em;
-    margin-top: 1.5em;
-    bottom: 0.5em;
-    top: 0.5em;
+  color: white;
+  font-size: 1.5em;
+  text-align: left;
+  margin-left: 4em;
+  margin-right: 4em;
+  margin-top: 1.5em;
+  bottom: 0.5em;
+  top: 0.5em;
 
 }
 
@@ -228,10 +235,10 @@ h1 {
 }
 
 .lien-github {
-  text-decoration: none; 
+  text-decoration: none;
   color: #000;
-  background-color: #ccc; 
-  transition: background-color 0.3s ease, color 0.3s ease; 
+  background-color: #ccc;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .lien-github:hover {
@@ -275,7 +282,7 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  align-items: flex-end; 
+  align-items: flex-end;
 }
 
 .image-container-2 {
@@ -285,7 +292,8 @@ h1 {
   align-items: flex-start;
 }
 
-.divers-img-g, .divers-img-d {
+.divers-img-g,
+.divers-img-d {
   max-width: 100%;
   height: auto;
 }
@@ -301,9 +309,10 @@ h1 {
 
 
 
-.divers-img-d{
+.divers-img-d {
   border-radius: 10px;
 }
+
 .divers-img-g {
   margin: 0 10px;
   border-radius: 10px;
@@ -313,88 +322,88 @@ h1 {
 
 
 .titre {
-    color: white;
-    font-size: 2em;
-    text-align: left;
-    margin-left: 3em;
-    margin-right: 4em;
-    margin-top: 1.5em;
-    bottom: 0.5em;
-    top: 0.5em;
-    font-family: 'Ubuntu', sans-serif;
+  color: white;
+  font-size: 2em;
+  text-align: left;
+  margin-left: 3em;
+  margin-right: 4em;
+  margin-top: 1.5em;
+  bottom: 0.5em;
+  top: 0.5em;
+  font-family: 'Ubuntu', sans-serif;
 
 }
 
 .image-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    text-align: center; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .down-arrow {
-    margin-top: 3em;
-    margin-bottom: 1em;
-    margin-left: 28em;
-    margin-right: auto;
-    cursor: pointer;
-    transition: transform 0.3s ease, filter 0.3s ease; 
-    height: 80px;
-    filter: hue-rotate(0deg);
+  margin-top: 3em;
+  margin-bottom: 1em;
+  margin-left: 28em;
+  margin-right: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  height: 80px;
+  filter: hue-rotate(0deg);
 }
 
 .down-arrow:hover {
-    transform: translateY(+5px);
+  transform: translateY(+5px);
 }
 
 
 /* Téléchargement */
 
 .download-button {
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    width: 300px;
-    height: 50px;
-    padding: 10px 20px;
-    border: 2px solid #1DB954;
-    background-color: transparent;
-    color: white;
-    font-family: "Ubuntu", sans-serif;
-    text-decoration: none;
-    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
-    text-align: center;
-    margin: 0 auto;
-  }
-  
-  .download-button:hover {
-    background-color: #1DB954;
-    color: white;
-    box-shadow: 0 0 10px #1DB954;
-  }
-  
-  .download-button .button-text::before {
-    content: "Télécharger mon CV";
-    transition: opacity 0.3s;
-    
-  }
-  
-  .download-button:hover .button-text::before {
-    content: "Cliquez pour télécharger";
-    animation: fadeInAnimation 1s ease-in-out forwards;
-  }
-  
-  .button-text::before {
-    position: relative;
-    z-index: 2;
-  }
-  
-  
-  
-  .download-container {
-    text-align: center;
-  
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 50px;
+  padding: 10px 20px;
+  border: 2px solid #1DB954;
+  background-color: transparent;
+  color: white;
+  font-family: "Ubuntu", sans-serif;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.download-button:hover {
+  background-color: #1DB954;
+  color: white;
+  box-shadow: 0 0 10px #1DB954;
+}
+
+.download-button .button-text::before {
+  content: "Télécharger mon CV";
+  transition: opacity 0.3s;
+
+}
+
+.download-button:hover .button-text::before {
+  content: "Cliquez pour télécharger";
+  animation: fadeInAnimation 1s ease-in-out forwards;
+}
+
+.button-text::before {
+  position: relative;
+  z-index: 2;
+}
+
+
+
+.download-container {
+  text-align: center;
+
+}
 
 
 
@@ -409,25 +418,52 @@ h1 {
   margin-left: 17em;
   margin-right: 1em;
   position: absolute;
-  top: 0.9em; 
-  left: 0em; 
+  top: 0.9em;
+  left: 0em;
 }
 
-#progression100, #progression95, #progression90, #progression85, #progression80, #progression70, #progression60 {
+#progression100,
+#progression95,
+#progression90,
+#progression85,
+#progression80,
+#progression70,
+#progression60 {
   height: 100%;
   background-color: #1DB954;
   transition: width 0.3s ease;
 }
 
-#progression100 { width: 100%; }
-#progression95 { width: 95%; }
-#progression90 { width: 90%; }
-#progression85 { width: 85%; }
-#progression80 { width: 80%; }
-#progression70 { width: 70%; }
-#progression60 { width: 60%; }
+#progression100 {
+  width: 100%;
+}
 
-#barreChargement:hover, #barreChargement:hover #progression {
+#progression95 {
+  width: 95%;
+}
+
+#progression90 {
+  width: 90%;
+}
+
+#progression85 {
+  width: 85%;
+}
+
+#progression80 {
+  width: 80%;
+}
+
+#progression70 {
+  width: 70%;
+}
+
+#progression60 {
+  width: 60%;
+}
+
+#barreChargement:hover,
+#barreChargement:hover #progression {
   box-shadow: 0 0 10px rgba(29, 185, 84, 1);
   transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
 }
@@ -437,7 +473,7 @@ h1 {
   left: 34em;
 }
 
-/* Competences */ 
+/* Competences */
 .depliant-title {
   font-size: 30px;
   width: 100%;
@@ -445,7 +481,8 @@ h1 {
   margin: 0;
   padding: 10px 10px 0 48px;
   display: block;
-  cursor: pointer; /* Indicates clickable */
+  cursor: pointer;
+  /* Indicates clickable */
   color: #ffffff;
   font-family: 'Ubuntu', sans-serif;
   margin-right: 1em;
@@ -463,11 +500,12 @@ h1 {
   color: #ffffff;
   font-family: 'Ubuntu', sans-serif;
   transition: .4s ease;
-  cursor: pointer; /* Indicates clickable */
+  cursor: pointer;
+  /* Indicates clickable */
   margin-right: 1em;
 }
 
-.depliant:checked ~ .depliant-content {
+.depliant:checked~.depliant-content {
   height: auto;
   opacity: 1;
   padding: 14px;
@@ -484,12 +522,13 @@ h1 {
   user-select: none;
   transition: .2s ease;
   color: white;
-  cursor: pointer; /* Indicates clickable */
+  cursor: pointer;
+  /* Indicates clickable */
   margin-left: 2.2em;
   margin-right: 1em;
 }
 
-.depliant:checked ~ .plus {
+.depliant:checked~.plus {
   transform: rotate(45deg);
   margin-right: 1em;
 }
@@ -513,52 +552,53 @@ h1 {
   margin-right: 5.5em;
 }
 
-  
+
 
 /* Foooooooter */
 footer {
-    background-color: #000;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  footer img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
-  
-  .logo-uca {
-    float: left;
-  }
-  
-  .logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: auto;
-    transform: translateX(15px);
-  }
-  
-  .logo-container img {
-    margin: 0 25px; /* espace logos */
-  }
-  
-  .a-moi {
-    float: right;
-  }
-  
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.logo-uca {
+  float: left;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  transform: translateX(15px);
+}
+
+.logo-container img {
+  margin: 0 25px;
+  /* espace logos */
+}
+
+.a-moi {
+  float: right;
+}
+
 
 .fleches-footer {
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .fleche-footer {
-    height: 60px;
-    margin-left: 2em;
+  height: 60px;
+  margin-left: 2em;
 }
 
 
@@ -600,9 +640,12 @@ footer {
   cursor: pointer;
   height: 20px;
   width: auto;
-  filter: brightness(0) invert(1); /* Change la couleur de l'icône en blanc */
-  position: relative; /* Permet de positionner l'icône */
-  top: -20px; /* Surélevé de 20px */
+  filter: brightness(0) invert(1);
+  /* Change la couleur de l'icône en blanc */
+  position: relative;
+  /* Permet de positionner l'icône */
+  top: -20px;
+  /* Surélevé de 20px */
 }
 
 
@@ -612,12 +655,16 @@ footer {
 .projects-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Centre horizontalement */
-  align-items: center; /* Centre verticalement si besoin */
+  justify-content: center;
+  /* Centre horizontalement */
+  align-items: center;
+  /* Centre verticalement si besoin */
   gap: 2em;
   padding: 2em;
-  margin: 0 auto; /* Centre le conteneur lui-même */
-  max-width: 1200px; /* Limite la largeur maximale pour centrer mieux */
+  margin: 0 auto;
+  /* Centre le conteneur lui-même */
+  max-width: 1200px;
+  /* Limite la largeur maximale pour centrer mieux */
 }
 
 .project-card {
@@ -625,7 +672,8 @@ footer {
   border-radius: 10px;
   overflow: hidden;
   width: 300px;
-  height: 450px; /* Hauteur fixe pour aligner les cartes */
+  height: 450px;
+  /* Hauteur fixe pour aligner les cartes */
   display: flex;
   flex-direction: column;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -653,7 +701,8 @@ footer {
   color: white;
   padding: 0 1em;
   margin: 0;
-  flex-grow: 1; /* Permet au texte de prendre l'espace disponible */
+  flex-grow: 1;
+  /* Permet au texte de prendre l'espace disponible */
 }
 
 .skills {
@@ -679,7 +728,8 @@ footer {
   padding: 0.8em;
   text-decoration: none;
   transition: background-color 0.3s ease;
-  margin-top: auto; /* Pousse le bouton vers le bas */
+  margin-top: auto;
+  /* Pousse le bouton vers le bas */
 }
 
 .more-button:hover {
