@@ -438,7 +438,7 @@ top: 0.9em;
 left: 0em; 
 }
 
-#progression100, #progression95, #progression90, #progression85, #progression80, #progression70, #progression60 {
+#progression100, #progression95, #progression90, #progression85, #progression80, #progression70, #progression60, #progression50 {
 height: 100%;
 background-color: #1DB954;
 transition: width 0.3s ease;
@@ -451,6 +451,7 @@ transition: width 0.3s ease;
 #progression80 { width: 80%; }
 #progression70 { width: 70%; }
 #progression60 { width: 60%; }
+#progression50 { width: 50%; }
 
 #barreChargement:hover, #barreChargement:hover #progression {
 box-shadow: 0 0 10px rgba(29, 185, 84, 1);
