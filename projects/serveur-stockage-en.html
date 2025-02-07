@@ -20,7 +20,7 @@
     <br>
 
     <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-    <h1 class="fade-in">My <span class="highlight">Projects</span>: File Storage and Torrent Management Server</h1>
+    <h1 class="fade-in">My <span class="highlight">Projects</span>: File Storage management Server</h1>
 
     <p class="titre"><span class="highlight">Context:</span></p>
     <p class="projets-txt">Storing files can become cumbersome, especially in terms of space and accessibility. External
@@ -29,22 +29,27 @@
         storage server.</p>
 
     <p class="titre"><span class="highlight">Objective:</span></p>
-    <p class="projets-txt">The primary objective was to have storage space accessible from anywhere, without relying on
-        physical media or paid services. To achieve this, I repurposed a defective PC that I repaired and equipped with
-        a 14 TB hard drive. By installing Debian and configuring a static IP address, I made the server accessible via
-        SSH. Additionally, I installed a torrent manager, specifically qBittorrent, to simplify file uploads. The
-        configuration of the web interface for the torrent manager allows easy remote access, secured with a strong
-        password.</p>
+    <p class="projets-txt">The main objective was to have a storage space accessible from anywhere, without 
+        relying on physical media or paid services. To achieve this, I recovered a faulty PC, repaired it, 
+        and equipped it with a 14 TB hard drive. By installing Debian and configuring a static IP address, 
+        I made server access easier via SSH. Then, I installed VSFTPd, which allows for easy and more secure 
+        file uploads and downloads compared to a simple FTP server. The key is to carefully manage user 
+        permissions and access rights.</p>
+
+    <p class="projets-txt">I also had to address the issue of external access to the network. Since I live in 
+        a student residence, I do not have access to the router configuration and therefore cannot port 
+        forward the various services on my server. To work around this limitation, I used SSH to create a 
+        tunnel between my local server and my cloud-based VPS, making it accessible from outside the network.</p>
 
     <p class="titre"><span class="highlight">Skills Developed:</span></p>
     <p class="projets-txt"><span class="highlight">Hardware Repair and Configuration:</span> Recovering and repairing a
         defective PC, adding an extra hard drive.</p>
     <p class="projets-txt"><span class="highlight">System Administration:</span> Installing and configuring Debian,
         assigning a static IP address.</p>
-    <p class="projets-txt"><span class="highlight">Network Management:</span> Opening ports on the router to allow
+    <p class="projets-txt"><span class="highlight">Network Management:</span> Usage of SSH tunnels to allow
         remote access.</p>
-    <p class="projets-txt"><span class="highlight">Software Usage:</span> Installing and configuring qBittorrent for
-        torrent management.</p>
+    <p class="projets-txt"><span class="highlight">Software Usage:</span> Installing and configuring vsFTPd for
+        files management.</p>
     <p class="projets-txt"><span class="highlight">Cybersecurity:</span> Adding IP rules to allow only known IPs and
         securing server access with a strong password.</p>
     <br>
