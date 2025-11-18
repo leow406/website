@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio – Stage DMARC</title>
+    <link rel="stylesheet" type="text/css" href="styles-home.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap">
+</head>
+
+<body class="fade-in">
+
+    <header>
+        <div class="arrow-indicator"></div>
+        <div id="about"></div>
+        <button class="dropbtn" onclick="window.location.href='../index.html#projects';">Accueil</button>
+    </header>
+    <br>
+
+    <h1>Projet : <span class="highlight">Mise en place d’une politique de sécurité des emails</span></h1>
+
+    <p class="titre"><span class="highlight">Contexte :</span></p>
+    <p class="projets-txt">Durant mon stage de fin de deuxième année de BUT Réseaux & Télécommunications au sein de
+        <span class="highlight">Trivium Packaging</span>, j’ai intégré l’équipe <span class="highlight">InfoSec</span>
+        chargée de la sécurité des systèmes d’information. Trivium est une entreprise internationale spécialisée dans la
+        fabrication d’emballages métalliques recyclables, présente dans 19 pays et collaborant avec des marques comme
+        Nivea, L’Oréal, Heinz ou Nestlé.
+    </p>
+
+    <p class="titre"><span class="highlight">Problématique :</span></p>
+    <p class="projets-txt">Comment renforcer la sécurité des échanges de mails à l’échelle d’un groupe international ?
+        Plus précisément, comment passer d’une simple politique <span class="highlight">DMARC en mode observation
+            (p=none)</span>
+        à une politique active <span class="highlight">(p=reject)</span> bloquant les emails non authentifiés ou
+        frauduleux ?</p>
+
+    <p class="titre"><span class="highlight">Objectifs :</span></p>
+
+    <div class="depliant-container">
+        <div class="plus"><span class="highlight">+ </span></div>
+        <label class="depliant-title">Centraliser et exploiter les rapports DMARC accumulés (plus de 60 000).</label>
+    </div>
+    </div>
+    <br>
+    <div class="depliant-container">
+        <div class="plus"><span class="highlight">+ </span></div>
+        <label class="depliant-title">Identifier les sources d’envoi non conformes (prestataires tiers, serveurs SAP,
+            etc.).</label>
+    </div>
+    </div>
+    <br>
+    <div class="depliant-container">
+        <div class="plus"><span class="highlight">+ </span></div>
+        <label class="depliant-title">Mettre en place une solution de visualisation et de traitement automatique des
+            rapports.</label>
+    </div>
+    </div>
+    <br>
+    <div class="depliant-container">
+        <div class="plus"><span class="highlight">+ </span></div>
+        <label class="depliant-title">Améliorer le taux d’alignement SPF/DKIM jusqu’à atteindre un niveau ≥ 95
+            %.</label>
+    </div>
+    </div>
+    <br>
+    <div class="depliant-container">
+        <div class="plus"><span class="highlight">+ </span></div>
+        <label class="depliant-title">Migrer progressivement vers une politique <span
+                class="highlight">p=reject</span>.</label>
+    </div>
+    </div>
+    <br>
+
+
+    <p class="titre"><span class="highlight">Travail réalisé :</span></p>
+    <p class="projets-txt">
+        <span class="highlight">1. Étude des protocoles :</span> apprentissage et compréhension des mécanismes
+        <span class="highlight">SPF</span> (serveurs autorisés), <span class="highlight">DKIM</span> (signature des
+        messages) et <span class="highlight">DMARC</span> (contrôle d’alignement et reporting).
+    </p>
+
+    <p class="projets-txt">
+        <span class="highlight">2. Choix de la solution :</span> après comparaison de plusieurs outils
+        (<span class="highlight">DMARCian</span>, <span class="highlight">EasyDMARC</span>,
+        <span class="highlight">OnDMARC</span>), la solution <span class="highlight">Valimail</span> a été retenue pour
+        sa conformité RGPD et son hébergement européen.
+    </p>
+
+    <p class="projets-txt">
+        <span class="highlight">3. Mise en œuvre technique :</span> nettoyage complet de la boîte DMARC (via
+        <span class="highlight">PowerShell</span>), redirection automatique des rapports vers Valimail, traitement et
+        analyse de plus de <span class="highlight">135 000 rapports</span> sur 30 jours, et identification de cinq
+        prestataires non conformes.
+    </p>
+
+    <p class="projets-txt">
+        <span class="highlight">4. Montée en politique :</span> définition d’un plan de transition progressif :
+        <span class="highlight">p=none → p=quarantine → p=reject</span>, selon la recommandation de Valimail (stabilité
+        sur 30 jours et alignement ≥ 95 %).
+    </p>
+
+    <p class="titre"><span class="highlight">Résultats obtenus :</span>
+
+
+    <div class="depliant-container">
+        <div class="plus"><span class="highlight">+ </span></div>
+        <label class="depliant-title">Boîte DMARC nettoyée et automatisée.</label>
+    </div>
+    </div>
+    <br>
+    <div class="depliant-container">
+        <div class="plus"><span class="highlight">+ </span></div>
+        <label class="depliant-title"> 135 000 rapports traités et analysés.</label>
+    </div>
+    </div>
+    <br>
+    <div class="depliant-container">
+        <div class="plus"><span class="highlight">+ </span></div>
+        <label class="depliant-title">SPF et DKIM alignés sur les principaux services.</label>
+    </div>
+    </div>
+    <br>
+    <div class="depliant-container">
+        <div class="plus"><span class="highlight">+ </span></div>
+        <label class="depliant-title">Identification de prestataires non conformes.</label>
+    </div>
+    </div>
+    <br>
+
+    <div class="depliant-container">
+        <div class="plus"><span class="highlight">+ </span></div>
+        <label class="depliant-title">Préparation de la bascule vers <span class="highlight">p=reject</span></label>
+    </div>
+    </div>
+    <br>
+
+
+
+
+    <p class="titre"><span class="highlight">Difficultés rencontrées :</span></p>
+
+    <div class="depliant-container">
+        <div class="plus"><span class="highlight">+ </span></div>
+        <label class="depliant-title">Volume important de rapports à traiter manuellement.</label>
+    </div>
+    </div>
+    <br>
+    <div class="depliant-container">
+        <div class="plus"><span class="highlight">+ </span></div>
+        <label class="depliant-title">Absence initiale de connaissances sur DMARC/SPF/DKIM.</label>
+    </div>
+    </div>
+    <br>
+    <div class="depliant-container">
+        <div class="plus"><span class="highlight">+ </span></div>
+        <label class="depliant-title">Compréhension et manipulation de rapports XML volumineux.</label>
+    </div>
+    </div>
+    <br>
+    <div class="depliant-container">
+        <div class="plus"><span class="highlight">+ </span></div>
+        <label class="depliant-title">Besoin d’intégrer rapidement les outils de l’équipe InfoSec.</label>
+    </div>
+    </div>
+    <br>
+
+
+
+
+    <p class="titre"><span class="highlight">Perspectives :</span></p>
+    <div class="depliant-container">
+        <div class="plus"><span class="highlight">+ </span></div>
+        <label class="depliant-title">Passage définitif en <span class="highlight">p=reject</span>.</label>
+    </div>
+    </div>
+    <br>
+    <div class="depliant-container">
+        <div class="plus"><span class="highlight">+ </span></div>
+        <label class="depliant-title">Mise en place d’un suivi automatique des nouveaux émetteurs via Valimail.</label>
+    </div>
+    </div>
+    <br>
+    <div class="depliant-container">
+        <div class="plus"><span class="highlight">+ </span></div>
+        <label class="depliant-title">Maintien de la conformité et mise à jour régulière des enregistrements
+            DNS.</label>
+    </div>
+    </div>
+    <br>
+    <div class="depliant-container">
+        <div class="plus"><span class="highlight">+ </span></div>
+        <label class="depliant-title">Extension de la politique DMARC à d’autres domaines du groupe Trivium.</label>
+    </div>
+    </div>
+    <br>
+
+
+    <p class="titre"><span class="highlight">Compétences développées :</span></p>
+    <p class="projets-txt"><span class="highlight">Sécurité des systèmes et réseaux :</span> implémentation de
+        protocoles
+        de sécurité mail (SPF, DKIM, DMARC).</p>
+    <p class="projets-txt"><span class="highlight">Administration DNS :</span> gestion et mise à jour d’enregistrements
+        TXT pour les domaines internes.</p>
+    <p class="projets-txt"><span class="highlight">Scripting PowerShell :</span> automatisation du nettoyage et du
+        traitement de données massives.</p>
+    <p class="projets-txt"><span class="highlight">Analyse et reporting :</span> interprétation de rapports DMARC via
+        Valimail et élaboration de tableaux de bord.</p>
+    <p class="projets-txt"><span class="highlight">Communication professionnelle :</span> coordination avec l’équipe
+        InfoSec et rédaction de documentation technique claire.</p>
+
+    <br>
+    <p class="projets-txt">Illustration du projet :</p>
+    <br>
+
+    <div class="container">
+        <div class="column">
+            <div class="image-container-1">
+                <a onclick="openLightbox('../images/dmarc1.png')"><img src="../images/dmarc1.png" class="projet-img"
+                        style="width: 600px; height: auto;"></a>
+            </div>
+        </div>
+        <div class="column">
+            <div class="image-container-2">
+                <a onclick="openLightbox('../images/dmarc2.png')"><img src="../images/dmarc2.png" class="projet-img"
+                        style="width: 600px; height: auto;"></a>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <footer>
+        <div class="logo-uca">
+            <img src="../images/logo-uca.png" alt="Logo UCA" style="width: 100px;">
+        </div>
+        <div class="a-moi" style="width: 100px;">
+            <a>Webert Léo 2025-2026 </a>
+        </div>
+        <div class="logo-container">
+            <a href="mailto:leowbrt@gmail.com" target="_blank"><img src="../images/logo-email.png" alt="Logo 1"
+                    style="width: 45px;"></a>
+            <a href="https://www.linkedin.com/in/léo-webert-0671222a9/" target="_blank"><img
+                    src="../images/logo-linkedin.png" alt="Logo 2" style="width: 40px;"></a>
+            <a href="https://github.com/leow406" target="_blank"><img src="../images/logo-github.png" alt="Logo 2"
+                    style="width: 43px;"></a>
+        </div>
+    </footer>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close-btn" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img" class="lightbox-img" src="" alt="Image en plein écran">
+    </div>
+
+    <script src="../script.js" defer></script>
+</body>
+
+</html>
