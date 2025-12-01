@@ -7,7 +7,7 @@ function openLightbox(imageSrc) {
   lightboxImg.src = imageSrc;
 }
 
-// Fonction pour fermer la lightbox
+// fermer la lightbox
 function closeLightbox() {
   document.getElementById('lightbox').style.display = "none";
 }
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const dotsContainer = document.querySelector('.carousel-dots');
   let currentIndex = 0;
   let interval;
-  const delay = 20000; // 7 secondes
+  const delay = 30000; // 7 secondes
 
   // Créer les points dynamiquement
   items.forEach((_, i) => {
