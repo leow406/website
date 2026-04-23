@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projets > Auto-hebergement de services / Cloud hybride</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    /* ########## Styles spécifiques aux pages de projets ########## */
+    
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--fg-dimmer);
+      text-decoration: none;
+      font-size: 0.9em;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      transition: color 0.15s, transform 0.15s;
+    }
+    .back-link:hover {
+      color: var(--accent);
+      transform: translateX(-4px);
+    }
+
+    .project-hero {
+      padding: 2rem 0 3rem;
+      border-bottom: 1px solid var(--fg-dimmer);
+    }
+    .project-hero-pre {
+      font-size: 0.8em;
+      color: var(--red);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+    .project-hero-title {
+      font-family: var(--vt);
+      font-size: clamp(40px, 5.5vw, 68px);
+      color: var(--accent);
+      line-height: 1;
+      letter-spacing: 3px;
+      margin-bottom: 1rem;
+    }
+    
+    .project-meta {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+      font-size: 0.85em;
+      color: var(--fg-dimmer);
+    }
+    .project-meta span { color: var(--fg-dim); }
+    
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 1.5rem;
+    }
+
+    .project-content {
+      padding: 3.5rem 0;
+      color: var(--fg-dim);
+      line-height: 1.85;
+    }
+    .project-content h2 {
+      font-family: var(--vt);
+      font-size: 2rem;
+      color: var(--accent);
+      margin: 2.5rem 0 1rem;
+      letter-spacing: 2px;
+      font-weight: normal;
+    }
+    .project-content h2::before {
+      content: '// ';
+      color: var(--fg-dimmer);
+    }
+    .project-content p { margin-bottom: 1.5rem; }
+    
+    .project-content ul {
+      margin-bottom: 1.5rem;
+      list-style: none;
+    }
+    .project-content li { margin-bottom: 0.5rem; }
+    .project-content li::before {
+      content: '> ';
+      color: var(--red);
+    }
+    
+    .project-image {
+      width: 100%;
+      border: 1px solid var(--fg-dimmer);
+      margin: 2rem 0;
+      background: rgba(255,255,255,0.02);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="../index.html" class="site-title">project02.dll<span class="cursor">_</span></a>
+    <nav>
+      <a href="../index.html#about">a propos de moi</a>
+      <a href="../index.html#experience">experience</a>
+      <a href="../index.html#skills">compétences</a>
+      <a href="../index.html#projects" class="active">projets</a>
+      <a href="../index.html#misc">divers</a>
+      <a href="../index.html#contact">contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <div style="padding-top: 2rem;">
+      <a href="../index.html#projects" class="back-link">← Retour aux projets</a>
+    </div>
+
+    <div class="project-hero">
+      <p class="project-hero-pre">// homelab</p>
+      <h1 class="project-hero-title glitch">Auto hebergement de services / cloud hybride</h1>
+      
+      <div class="project-meta">
+        <div>Date <span>Septembre 2024 → Présent</span></div>
+        <div>Rôle <span>Administrateur Système & Réseau</span></div>
+        <div>Contexte <span>Projet Personnel / Auto-hébergement</span></div>
+      </div>
+
+      <p class="hero-bio">
+        Conception d'une infrastructure hybride sécurisée reliant un VPS public (OVH) à un environnement local. L'architecture repose sur un tunnel Wireguard chiffré, permettant d'exposer des services critiques sans compromettre la sécurité du réseau domestique ni révéler l'adresse IP source.
+      </p>
+
+          <div class="project-tags">
+            <span class="tag red">Auto-hebergement</span>
+            <span class="tag">Wireguard</span>
+            <span class="tag">VPN</span>
+            <span class="tag">Securité</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Chiffrement</span>
+            <span class="tag">Monitoring</span>
+          </div>
+    </div>
+
+    <section class="project-content fade-in">
+      <h2>Contexte & Problématique</h2>
+      <p>
+        Dans un contexte de montée des cybermenaces et de centralisation des données, j'ai souhaité reprendre le contrôle de mes outils numériques. La problématique était double :
+      </p>
+      <p>
+        1. <strong>Souveraineté :</strong> Héberger mes propres services pour ne plus dépendre de tiers. Cela permet de limiter la collecte de donnée et de limiter les couts<br>
+        2. <strong>Sécurité :</strong> Rendre ces services accessibles via un nom de domaine sans ouvrir aucun port sur ma box internet résidentielle, évitant ainsi les scans de ports malveillants sur mon IP privée.
+      </p>
+
+      <h2>Objectifs</h2>
+      <ul>
+        <li>Établir un pont réseau permanent et chiffré entre le Cloud (OVH) et le domicile.</li>
+        <li>Centraliser la gestion des flux entrants via un Reverse Proxy unique (Nginx).</li>
+        <li>Isoler les services dans des conteneurs Docker pour faciliter la maintenance.</li>
+        <li>Garantir la confidentialité des données via le chiffrement TLS/SSL et un tunnel VPN.</li>
+        <li>Assurer un monitoring des services.</li>
+      </ul>
+
+      <h2>Démarche & Déploiement</h2>
+      <p>
+        L'architecture se divise en deux segments interconnectés par un lien point-à-point :
+      </p>
+      <ul>
+        <li><strong>Étape 1 - Front-end (OVH) :</strong> Configuration d'un Reverse Proxy sur une instance Debian. Ce serveur reçoit le trafic public et le redirige de manière sélective dans le tunnel VPN vers le Homelab.</li>
+        <li><strong>Étape 2 - Tunnel Wireguard :</strong> Mise en place du tunnel chiffré entre le VPS et le serveur local. Le VPS fait office d'endpoint fixe, masquant totalement l'infrastructure domestique.</li>
+        <li><strong>Étape 3 - Routage Interne :</strong> Configuration du routage IP pour que les requêtes atteignent les services locaux sur la plage d'IP privée dédiée (<code>10.8.0.0/24</code>).</li>
+        <li><strong>Étape 4 - Écosystème de Services :</strong> Déploiement d'une stack Docker incluant <strong>Nextcloud</strong> (Cloud collaboratif), <strong>Vaultwarden</strong> (gestionnaire de mots de passe), et <strong>Webtop</strong> (VM Linux XFCE déportée) pour l'administration distante.</li>
+      </ul>
+
+      <img src="../images/project-02_2.png" alt="Schéma de l'architecture hybride Cloud / Homelab" class="project-image">
+
+      <h2>Résultats & Difficultés</h2>
+      <p>
+        Le projet est aujourd'hui mon environnement de travail quotidien. L'intégration de <strong>Beszel</strong> permet une surveillance des ressources matérielles, tandis qu'<strong>Uptime Kuma</strong> m'alerte instantanément en cas d'interruption d'un service.
+      </p>
+      <p>
+        Le principal défi a été la gestion de la persistance du tunnel et la résolution DNS interne. J'ai dû optimiser les paramètres <code>PersistentKeepalive</code> de Wireguard pour prévenir les déconnexions dues aux changements d'IP dynamique de ma connexion résidentielle. Ce projet m'a permis de consolider mes compétences en <strong>routage Linux</strong>, en <strong>gestion de certificats</strong> et en <strong>supervision réseau</strong>.
+      </p>
+
+      <img src="../images/project-02_1.png" alt="Interface de monitoring Beszel et Uptime Kuma" class="project-image">
+
+      <div style="margin-top: 4rem; display: flex; justify-content: center;">
+        <a href="../index.html#projects" class="btn" style="width: 50px; height: 50px; padding: 0; justify-content: center; font-size: 1.5rem; font-family: var(--vt);" title="Retour à l'accueil">⌂</a>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <p class="footer-text">© 2025–2026 <span data-b64="V0VCRVJUIEzDiU8="></span> - IUT Clermont-Ferrand - Aubière</p>
+  </div>
+</footer>
+
+<script src="../main.js"></script>
+
+</body>
+</html>

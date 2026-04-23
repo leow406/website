@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projets > Projet Intégratif</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    /* ########## Styles spécifiques aux pages de projets ########## */
+    
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--fg-dimmer);
+      text-decoration: none;
+      font-size: 0.9em;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      transition: color 0.15s, transform 0.15s;
+    }
+    .back-link:hover {
+      color: var(--accent);
+      transform: translateX(-4px);
+    }
+
+    .project-hero {
+      padding: 2rem 0 3rem;
+      border-bottom: 1px solid var(--fg-dimmer);
+    }
+    .project-hero-pre {
+      font-size: 0.8em;
+      color: var(--red);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+    .project-hero-title {
+      font-family: var(--vt);
+      font-size: clamp(40px, 5.5vw, 68px);
+      color: var(--accent);
+      line-height: 1;
+      letter-spacing: 3px;
+      margin-bottom: 1rem;
+    }
+    
+    .project-meta {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+      font-size: 0.85em;
+      color: var(--fg-dimmer);
+    }
+    .project-meta span { color: var(--fg-dim); }
+    
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 1.5rem;
+    }
+
+    .project-content {
+      padding: 3.5rem 0;
+      color: var(--fg-dim);
+      line-height: 1.85;
+    }
+    .project-content h2 {
+      font-family: var(--vt);
+      font-size: 2rem;
+      color: var(--accent);
+      margin: 2.5rem 0 1rem;
+      letter-spacing: 2px;
+      font-weight: normal;
+    }
+    .project-content h2::before {
+      content: '// ';
+      color: var(--fg-dimmer);
+    }
+    .project-content p { margin-bottom: 1.5rem; }
+    
+    .project-content ul {
+      margin-bottom: 1.5rem;
+      list-style: none;
+    }
+    .project-content li { margin-bottom: 0.5rem; }
+    .project-content li::before {
+      content: '> ';
+      color: var(--red);
+    }
+    
+    .project-image {
+      width: 100%;
+      border: 1px solid var(--fg-dimmer);
+      margin: 2rem 0;
+      background: rgba(255,255,255,0.02);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="../index.html" class="site-title">project04.dll<span class="cursor">_</span></a>
+    <nav>
+      <a href="../index.html#about">a propos de moi</a>
+      <a href="../index.html#experience">experience</a>
+      <a href="../index.html#skills">compétences</a>
+      <a href="../index.html#projects" class="active">projets</a>
+      <a href="../index.html#misc">divers</a>
+      <a href="../index.html#contact">contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <div style="padding-top: 2rem;">
+      <a href="../index.html#projects" class="back-link">← Retour aux projets</a>
+    </div>
+
+    <div class="project-hero">
+      <p class="project-hero-pre">// sae_24</p>
+      <h1 class="project-hero-title glitch">PROJET INTÉGRATIF</h1>
+      
+      <div class="project-meta">
+        <div>Date <span>2024</span></div>
+        <div>Rôle <span>Administrateur Réseau & Système</span></div>
+        <div>Contexte <span>Projet Universitaire (SAÉ 24)</span></div>
+      </div>
+
+      <p class="hero-bio">
+        Conception, déploiement et sécurisation de l'infrastructure réseau complète d'une PME. Intégration de services Windows/Linux, gestion des VLANs, et développement d'un portail web d'administration avec démonstration d'attaques réseau.
+      </p>
+
+          <div class="project-tags">
+            <span class="tag">Réseaux</span>
+            <span class="tag red">Administration</span>
+            <span class="tag">Linux</span>
+            <span class="tag">Securité</span>
+            <span class="tag">Web / PHP</span>
+          </div>
+    </div>
+
+    <section class="project-content fade-in">
+      <h2>Contexte & Objectifs</h2>
+      <p>
+        Dans le cadre du projet universitaire <strong>SAÉ 24</strong>, l'objectif était de concevoir et de mettre en place l'infrastructure réseau complète d'une petite entreprise composée de plusieurs services distincts (Finance, RH, Technique).
+      </p>
+      <p>
+        Cette infrastructure devait permettre une communication sécurisée entre les differents services via des <strong>VLANs</strong>, tout en assurant la connectivité Internet pour les postes clients et la haute disponibilité des services internes.
+      </p>
+
+      <h2>Architecture & Déploiement</h2>
+      <ul>
+        <li><strong>Réseau :</strong> Configuration d'un switch, d'un routeur et d'un réseau Wi-Fi. Mise en place de VLANs pour segmenter le trafic métier.</li>
+        <li><strong>Systèmes :</strong> Déploiement d'un serveur Windows avec <strong>Active Directory</strong> pour la gestion centralisée des utilisateurs, d'un serveur Linux, et d'un serveur de téléphonie (VoIP).</li>
+        <li><strong>Services :</strong> Mise en place de services critiques fonctionnels : DHCP, FTP, et serveur Web (Apache/PHP).</li>
+      </ul>
+
+      <img src="../images/project-04_1.png" alt="Aperçu de l'infrastructure réseau" class="project-image">
+
+      <h2>Sécurité & Interface d'Administration</h2>
+      <p>
+        Un aspect majeur du projet était la sécurisation de l'infrastructure contre les menaces internes, avec un focus sur les attaques de couche 2. Un serveur web a été mis en place, hébergeant une interface dynamique en <strong>PHP</strong> permettant l'authentification des utilisateurs et l'exécution de scripts d'automatisation.
+      </p>
+      <ul>
+        <li>Démonstration d'attaques réseau réelles, notamment le <strong>DHCP Starvation</strong> et le <strong>DHCP Spoofing (Rogue DHCP)</strong>.</li>
+        <li>Mise en place de contre-mesures actives sur les équipements réseaux (Switches) pour s'en prémunir.</li>
+        <li>Documentation et présentation des protocoles de sécurité via le portail web.</li>
+      </ul>
+
+      <img src="../images/project-04_2.png" alt="Détail des interfaces et scripts" class="project-image">
+
+      <h2>Bilan & Compétences</h2>
+      <p>
+        Ce projet intégratif a été une excellente opportunité de lier de multiples domaines de l'informatique pour obtenir une vision globale d'un SI d'entreprise :
+      </p>
+      <ul>
+        <li><strong>Configuration réseau :</strong> Routage, commutation, gestion du matériel (switch, firewall).</li>
+        <li><strong>Administration système :</strong> Déploiement AD, Linux, services réseaux (DHCP, FTP).</li>
+        <li><strong>Sécurité réseau :</strong> Identification des attaques L2/L3 et remédiations matérielles.</li>
+        <li><strong>Développement & Gestion :</strong> Scripts PHP, travail en équipe, planification des tâches de déploiement.</li>
+      </ul>
+
+      <div style="margin-top: 4rem; display: flex; justify-content: center;">
+        <a href="../index.html#projects" class="btn" style="width: 50px; height: 50px; padding: 0; justify-content: center; font-size: 1.5rem; font-family: var(--vt);" title="Retour à l'accueil">⌂</a>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <p class="footer-text">© 2025–2026 <span data-b64="V0VCRVJUIEzDiU8="></span> - IUT Clermont-Ferrand - Aubière</p>
+  </div>
+</footer>
+
+<script src="../main.js"></script>
+
+</body>
+</html>

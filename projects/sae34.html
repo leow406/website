@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projets > Pentest - SAÉ 3.04</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    /* ########## Styles spécifiques aux pages de projets ########## */
+    
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--fg-dimmer);
+      text-decoration: none;
+      font-size: 0.9em;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      transition: color 0.15s, transform 0.15s;
+    }
+    .back-link:hover {
+      color: var(--accent);
+      transform: translateX(-4px);
+    }
+
+    .project-hero {
+      padding: 2rem 0 3rem;
+      border-bottom: 1px solid var(--fg-dimmer);
+    }
+    .project-hero-pre {
+      font-size: 0.8em;
+      color: var(--red);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+    .project-hero-title {
+      font-family: var(--vt);
+      font-size: clamp(40px, 5.5vw, 68px);
+      color: var(--accent);
+      line-height: 1;
+      letter-spacing: 3px;
+      margin-bottom: 1rem;
+    }
+    
+    .project-meta {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+      font-size: 0.85em;
+      color: var(--fg-dimmer);
+    }
+    .project-meta span { color: var(--fg-dim); }
+    
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 1.5rem;
+    }
+
+    .project-content {
+      padding: 3.5rem 0;
+      color: var(--fg-dim);
+      line-height: 1.85;
+    }
+    .project-content h2 {
+      font-family: var(--vt);
+      font-size: 2rem;
+      color: var(--accent);
+      margin: 2.5rem 0 1rem;
+      letter-spacing: 2px;
+      font-weight: normal;
+    }
+    .project-content h2::before {
+      content: '// ';
+      color: var(--fg-dimmer);
+    }
+    .project-content h3 {
+      font-family: var(--mono);
+      font-size: 1rem;
+      color: var(--red);
+      margin: 2rem 0 0.75rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .project-content h3::before {
+      content: '> ';
+      color: var(--fg-dimmer);
+    }
+    .project-content p { margin-bottom: 1.5rem; }
+    
+    .project-content ul {
+      margin-bottom: 1.5rem;
+      list-style: none;
+    }
+    .project-content li { margin-bottom: 0.5rem; }
+    .project-content li::before {
+      content: '> ';
+      color: var(--red);
+    }
+    
+    .project-image {
+      width: 100%;
+      border: 1px solid var(--fg-dimmer);
+      margin: 2rem 0;
+      background: rgba(255,255,255,0.02);
+    }
+
+    /* ########## CVSS score badge ########## */
+    .cvss-badge {
+      display: inline-block;
+      padding: 0.2rem 0.7rem;
+      border: 1px solid var(--red);
+      color: var(--red);
+      font-size: 0.8em;
+      letter-spacing: 2px;
+      margin-bottom: 1rem;
+    }
+
+    /* ########## Image placeholder styling ##############################─ */
+    .image-placeholder {
+      width: 100%;
+      border: 1px dashed var(--fg-dimmer);
+      margin: 2rem 0;
+      padding: 2rem;
+      background: rgba(255,255,255,0.01);
+      color: var(--fg-dimmer);
+      font-size: 0.8em;
+      letter-spacing: 1px;
+      text-align: center;
+      box-sizing: border-box;
+    }
+    .image-placeholder::before {
+      display: block;
+      content: '[ IMAGE ]';
+      font-family: var(--vt);
+      font-size: 1.6rem;
+      color: var(--fg-dimmer);
+      margin-bottom: 0.5rem;
+      letter-spacing: 4px;
+    }
+
+    .image-caption {
+      text-align: center;
+      font-size: 0.8em;
+      color: var(--fg-dimmer);
+      margin-top: -1rem;
+      margin-bottom: 2rem;
+      font-style: italic;
+    }
+
+    /* ########## Section divider ##########─ */
+    .machine-divider {
+      border: none;
+      border-top: 1px solid var(--fg-dimmer);
+      margin: 3rem 0 1rem;
+      opacity: 0.4;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="../index.html" class="site-title">project03.dll<span class="cursor">_</span></a>
+    <nav>
+      <a href="../index.html#about">a propos de moi</a>
+      <a href="../index.html#experience">experience</a>
+      <a href="../index.html#skills">compétences</a>
+      <a href="../index.html#projects" class="active">projets</a>
+      <a href="../index.html#misc">divers</a>
+      <a href="../index.html#contact">contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <div style="padding-top: 2rem;">
+      <a href="../index.html#projects" class="back-link">← Retour aux projets</a>
+    </div>
+
+    <div class="project-hero">
+      <p class="project-hero-pre">// sae_34</p>
+      <h1 class="project-hero-title glitch">PENTEST & EXPLOITATION</h1>
+      
+      <div class="project-meta">
+        <div>Date <span>2025 / 2026</span></div>
+        <div>Rôle <span>Pentester</span></div>
+        <div>Contexte <span>Projet Universitaire</span></div>
+      </div>
+
+      <p class="hero-bio">
+        Audit de sécurité offensif sur 6 machines virtuelles aux profils variés (Linux / Windows). Pour chaque cible, application d'une méthodologie complète : reconnaissance réseau, énumération des services, identification des vulnérabilités, exploitation et élévation de privilèges jusqu'à l'accès root/SYSTEM.
+      </p>
+
+      <div class="project-tags">
+        <span class="tag red">Pentest</span>
+        <span class="tag">Metasploit</span>
+        <span class="tag">Nmap</span>
+        <span class="tag">Kali Linux</span>
+        <span class="tag red">Exploitation</span>
+        <span class="tag">Privilege Escalation</span>
+        <span class="tag">CVSS</span>
+        <span class="tag">CTF</span>
+      </div>
+    </div>
+
+    <section class="project-content">
+
+      <h2>Contexte & Objectifs</h2>
+      <p>
+        Dans le cadre de la SAÉ 3.04, l'objectif était de compromettre une série de machines vulnérables dans un environnement isolé, en appliquant les techniques et outils du pentest professionnel. Chaque machine représentait un niveau de difficulté et un vecteur d'attaque différent.
+      </p>
+      <p>
+        Pour chaque cible, la démarche suivie était structurée en deux phases : la <strong>reconnaissance</strong> (scan Nmap, énumération des services et versions, recherche de CVE) puis l'<strong>exploitation</strong> (sélection et configuration d'un exploit, obtention d'un shell, élévation de privilèges). Chaque vulnérabilité exploitée a fait l'objet d'un calcul de score <strong>CVSS v3.1</strong>.
+      </p>
+
+      <h2>Vue d'ensemble des machines</h2>
+
+      <div class="machine-grid">
+        <div class="machine-card">
+          <div class="machine-card-name">KIOPTRIX</div>
+          <div class="machine-card-os">Linux 2.4.17 · MontaVista</div>
+          <div class="machine-card-cve">Samba 2.2.1a - Trans2open Overflow</div>
+          <div class="machine-card-desc">Buffer overflow sur Samba via Metasploit. Accès root direct sans élévation de privilèges.</div>
+        </div>
+        <div class="machine-card">
+          <div class="machine-card-name">BLUE</div>
+          <div class="machine-card-os">Windows 7 SP1</div>
+          <div class="machine-card-cve">MS17-010 - EternalBlue · Score CVSS 9.8</div>
+          <div class="machine-card-desc">Exploit SMBv1 de la NSA. Accès SYSTEM sans authentification ni interaction utilisateur.</div>
+        </div>
+        <div class="machine-card">
+          <div class="machine-card-name">ACADEMY</div>
+          <div class="machine-card-os">Linux Debian · Apache / PHP</div>
+          <div class="machine-card-cve">Upload PHP malveillant + Cron privesc</div>
+          <div class="machine-card-desc">Reverse shell via upload de fichier PHP, escalade root par injection dans un script cron.</div>
+        </div>
+        <div class="machine-card">
+          <div class="machine-card-name">BUTLER</div>
+          <div class="machine-card-os">Windows 10 · Jenkins</div>
+          <div class="machine-card-cve">Jenkins Script Console - Groovy RCE</div>
+          <div class="machine-card-desc">Mot de passe par défaut Jenkins. Exécution de code Groovy pour obtenir un reverse shell.</div>
+        </div>
+        <div class="machine-card">
+          <div class="machine-card-name">DEV</div>
+          <div class="machine-card-os">Linux Debian · BoltWire / NFS</div>
+          <div class="machine-card-cve">LFI BoltWire + NFS + SUID zip privesc</div>
+          <div class="machine-card-desc">Chaîne d'attaque complète : LFI, partage NFS, clé RSA, puis privesc via sudo zip.</div>
+        </div>
+        <div class="machine-card">
+          <div class="machine-card-name">BLACKPEARL</div>
+          <div class="machine-card-os">Linux Debian · Navigate CMS · Nginx</div>
+          <div class="machine-card-cve">CVE-2018-17553 - Navigate CMS RCE · SUID PHP</div>
+          <div class="machine-card-desc">RCE non authentifié sur Navigate CMS, puis privesc via le bit SUID sur l'interpréteur PHP 7.3.</div>
+        </div>
+      </div>
+
+      <!-- ══════════════════════════════════════════════ -->
+      <hr class="machine-divider">
+      <h2>Machine 1 - Kioptrix</h2>
+
+      <h3>Reconnaissance</h3>
+      <p>
+        Scan réseau initial avec <code>nmap -sS -O 10.170.1.0/24</code> pour identifier la cible, suivi d'un scan de version <code>nmap -sV -O 10.170.1.21</code>. Les services identifiés incluent <strong>OpenSSH 2.9p2</strong>, <strong>Apache 1.3.20</strong> et <strong>Samba</strong>. Un scanner Metasploit (<code>auxiliary/scanner/smb/smb_version</code>) permet d'identifier la version précise : <strong>Samba 2.2.1a</strong>.
+      </p>
+
+      <h3>Exploitation - Trans2open Buffer Overflow</h3>
+      <div class="cvss-badge">CVSS 9.8 / 10 - CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</div>
+      <p>
+        Un buffer overflow survient lorsqu'un programme écrit plus de données dans un buffer mémoire que prévu, écrasant les instructions adjacentes. L'exploit <strong>Trans2open</strong> envoie des données calculées pour substituer le flux d'exécution par un code malveillant. Le payload meterpreter est remplacé par un simple <code>linux/x86/shell/reverse_tcp</code>.
+        <br> Résultat : <strong>shell root direct</strong>, sans élévation de privilèges.
+      </p>
+
+
+      <img src="../images/project-03_1.png" alt="" class="project-image">
+      <div class="image-caption">1. Utilisation d'un scanner SMB</div>
+
+      <img src="../images/project-03_2.png" alt="" class="project-image">
+      <div class="image-caption">2. Reverse shell root apres Trans2open</div>
+
+
+      <!-- ══════════════════════════════════════════════ -->
+      <hr class="machine-divider">
+      <h2>Machine 2 - Blue</h2>
+
+      <h3>Reconnaissance</h3>
+      <p>
+        Scan de la machine Windows révélant plusieurs ports ouverts dont le <strong>port 445 (SMB)</strong>. Le scanner <code>smb_version</code> identifie <strong>Windows 7 SP1 Ultimate (Build 7601)</strong> avec SMB 2.1 - cible connue d'EternalBlue.
+      </p>
+
+      <h3>Exploitation - EternalBlue (MS17-010)</h3>
+      <div class="cvss-badge">CVSS 9.8 / 10 - CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</div>
+      <p>
+        EternalBlue (CVE-2017-0144) est un exploit développé par la NSA, divulgué par les Shadow Brokers en 2017. Il exploite un buffer overflow dans le protocole <strong>SMBv1</strong> pour exécuter du code à distance avec les privilèges <strong>SYSTEM</strong>, sans aucune authentification ni interaction utilisateur. Sa dangerosité tient à sa capacité de propagation automatique entre machines, à l'origine des cyberattaques WannaCry et NotPetya. La configuration est minimale : RHOST et payload suffit. Résultat : <strong>meterpreter SYSTEM</strong> immédiat.
+      </p>
+
+      <img src="../images/project-03_3.png" alt="" class="project-image">
+            <div class="image-caption">3. Execution de l'exploit EternalBlue</div>
+
+
+
+      <!-- ══════════════════════════════════════════════ -->
+      <hr class="machine-divider">
+      <h2>Machine 3 - Academy</h2>
+
+      <h3>Reconnaissance</h3>
+      <p>
+        Nmap révèle un serveur FTP (<strong>vsFTPd 3.0.3</strong>) et Apache. La connexion anonyme au FTP permet de récupérer un fichier <code>note.txt</code> contenant les identifiants d'un site web et un hash MD5. L'outil <code>hashid</code> identifie l'algorithme ; un site de reverse lookup casse le hash : le mot de passe est <strong>"student"</strong>. DirBuster trouve ensuite le chemin <code>/academy/</code> hébergeant un portail de cours en ligne.
+      </p>
+
+      <h3>Exploitation - Upload PHP malveillant + Cron privesc</h3>
+      <p>
+        Le portail Academy permet l'upload d'une photo de profil sans validation du type de fichier. Un reverse shell PHP (trouvé sur github) est uploadé à la place, et exécuté par Apache. Une fois sur le système en tant que <code>www-data</code>, l'exploration révèle un script <code>backup.sh</code> appartenant à l'utilisateur <strong>grimmie</strong> et exécuté périodiquement par <strong>cron en root</strong>. Un mot de passe MySQL trouvé dans <code>config.php</code> permet de se connecter en SSH en tant que grimmie, de modifier <code>backup.sh</code> pour y injecter un meterpreter, et d'attendre l'exécution automatique par cron. Résultat : <strong>shell root</strong>.
+      </p>
+
+      <img src="../images/project-03_4.png" alt="" class="project-image">
+      <div class="image-caption">4. Upload de fichiers arbitraires</div>
+
+
+      <img src="../images/project-03_5.png" alt="" class="project-image">
+      <div class="image-caption">5. Utilisation de Metasploit comme C2</div>
+
+
+      <!-- ══════════════════════════════════════════════ -->
+      <hr class="machine-divider">
+      <h2>Machine 4 - Butler</h2>
+
+      <h3>Reconnaissance</h3>
+      <p>
+        Nmap identifie <strong>Windows 10</strong> avec un service HTTP Jetty sur le <strong>port 8080</strong>. L'accès au service révèle un panneau de connexion <strong>Jenkins</strong>. Les identifiants par défaut <code>jenkins / jenkins</code> permettent de s'authentifier directement.
+      </p>
+
+      <h3>Exploitation - Jenkins Script Console (Groovy RCE) + Named Pipe privesc</h3>
+      <p>
+        Jenkins expose une <strong>Script Console</strong> permettant l'exécution libre de code Groovy. Un reverse shell Groovy est injecté, récupéré via Netcat. Pour stabiliser la session, un payload <strong>meterpreter/reverse_https</strong> est généré avec msfvenom et transféré via <code>certutil</code> (outil Windows natif) pour contourner le pare-feu. L'élévation de privilèges est ensuite réalisée automatiquement par Metasploit via la technique <strong>Named Pipe Impersonation</strong>. Résultat : <strong>NT AUTHORITY\SYSTEM</strong>.
+      </p>
+
+      <img src="../images/project-03_6.png" alt="" class="project-image">
+      <div class="image-caption">6. Execution d'un code malveillant a l'aide de la console en Groovy</div>
+
+
+      <img src="../images/project-03_7.png" alt="" class="project-image">
+            <div class="image-caption">7. Elevation de privileges a l'aide d'un Named Pipe Impersonation</div>
+
+
+
+      <!-- ══════════════════════════════════════════════ -->
+      <hr class="machine-divider">
+      <h2>Machine 5 - Dev</h2>
+
+      <h3>Reconnaissance</h3>
+      <p>
+        La machine expose deux serveurs web (ports 80 et 8080) et un <strong>partage NFS</strong> (port 2049). DirBuster identifie une installation BoltWire sur le port 80. Sur le port 8080, le dossier <code>/dev/</code> expose une interface <strong>BoltWire</strong> permettant la création d'un compte sans restriction. Le scan NFS via Metasploit révèle que le partage <code>/srv/nfs</code> est montable publiquement.
+      </p>
+
+      <h3>Exploitation - Chaîne LFI + NFS + RSA + sudo zip</h3>
+      <p>
+        La chaîne d'attaque est la plus longue du projet et se déroule en plusieurs étapes :
+      </p>
+      <ul>
+        <li>Montage du partage NFS → récupération d'une archive <code>save.zip</code> protégée par mot de passe.</li>
+        <li>Cracking du mot de passe ZIP avec <strong>JohnTheRipper</strong> → mot de passe <strong>"java101"</strong>.</li>
+        <li>L'archive contient une <strong>clé privée RSA</strong> (<code>id_rsa</code>) appartenant à l'utilisateur <strong>jp</strong>.</li>
+        <li>Exploitation d'une faille <strong>LFI (Local File Inclusion)</strong> sur BoltWire (CVE non référencée, EDB-ID 48411) pour lire <code>/etc/passwd</code> et confirmer l'existence de l'utilisateur <code>jeanpaul</code>.</li>
+        <li>DirBuster trouve un fichier de configuration contenant le mot de passe <strong>"I_love_java"</strong>, utilisé comme passphrase de la clé RSA.</li>
+        <li>Connexion SSH en tant que <code>jeanpaul</code> via la clé RSA. <code>sudo -l</code> révèle que jeanpaul peut exécuter <code>/usr/bin/zip</code> sans mot de passe. L'option <code>--unzip-command</code> permet d'injecter <code>/bin/bash</code> exécuté en root.</li>
+      </ul>
+      <div class="cvss-badge">LFI - CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N - Score 6.5</div>
+
+      <img src="../images/project-03_8.png" alt="" class="project-image">
+            <div class="image-caption">8. Lecture du fichier /etc/passwd a l'aide d'une faille de type LFI</div>
+
+
+      <img src="../images/project-03_9.png" alt="" class="project-image">
+            <div class="image-caption">9. Elevation de privileges avec la commande "zip"</div>
+
+
+
+      <!-- ══════════════════════════════════════════════ -->
+      <hr class="machine-divider">
+      <h2>Machine 6 - Blackpearl</h2>
+
+      <h3>Reconnaissance</h3>
+      <p>
+        Nmap révèle <strong>SSH</strong>, un service <strong>DNS</strong> (ISC BIND 9.11.5) et <strong>Nginx</strong> sur le port 80. La commande <code>curl -v</code> sur le serveur expose un commentaire HTML contenant l'adresse mail <code>alek@blackpearl.tcm</code>, révélant le nom de domaine. Après édition de <code>/etc/hosts</code> pour résoudre <code>blackpearl.tcm</code>, l'accès via le virtual host affiche une page PHP. DirBuster trouve le chemin <code>/navigate/login.php</code> exposant <strong>Navigate CMS v2.8</strong>.
+      </p>
+
+      <h3>Exploitation - Navigate CMS RCE + SUID PHP</h3>
+      <div class="cvss-badge">CVE-2018-17553 - CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N - Score 6.5</div>
+      <p>
+        La vulnérabilité CVE-2018-17553 cible le script <code>maps_upload.php</code> de Navigate CMS qui ne vérifie pas l'authentification de l'utilisateur. Un attaquant peut uploader un meterpreter PHP directement, sans compte. L'exploit Metasploit <code>exploit/multi/http/navigate_cms_rce</code> automatise l'opération, requérant uniquement le VHOST et le RHOST. Une fois sur le système, la commande <code>find / -perm -u=s -type f</code> révèle que <code>/usr/bin/php7.3</code> possède le <strong>bit SUID</strong> activé. L'exécution de <code>pcntl_exec('/bin/sh', ['-p'])</code> via PHP lance un shell conservant les droits root. Résultat : <strong>shell root</strong>.
+      </p>
+
+
+      <img src="../images/project-03_10.png" alt="" class="project-image">
+            <div class="image-caption">10. Execution d'une faille de type RCE</div>
+
+      <img src="../images/project-03_11.png" alt="" class="project-image">
+            <div class="image-caption">11. Elevation de privileges avec le bit SUID</div>
+
+
+
+      <!-- ══════════════════════════════════════════════ -->
+      <hr class="machine-divider">
+      <h2>Bilan & Compétences</h2>
+      <p>
+        Ce projet a constitué une immersion complète dans la pratique du pentest offensif, en couvrant une large palette de vecteurs d'attaque sur des environnements Windows et Linux :
+      </p>
+      <ul>
+        <li><strong>Reconnaissance réseau :</strong> Maîtrise de Nmap (scan SYN, détection OS, versioning), DirBuster, dnsenum et dig pour la cartographie des cibles.</li>
+        <li><strong>Exploitation de vulnérabilités connues :</strong> Utilisation de Metasploit pour des exploits référencés (EternalBlue, Trans2open, Navigate CMS RCE) avec calcul de score CVSS v3.1 pour chaque vulnérabilité.</li>
+        <li><strong>Techniques de post-exploitation :</strong> Reverse shells (Netcat, PHP, Groovy), meterpreter, pivoting de session, contournement de pare-feu via HTTPS.</li>
+        <li><strong>Élévation de privilèges :</strong> Exploitation de cron, SUID, sudo misconfiguration, Named Pipe Impersonation sur Windows.</li>
+        <li><strong>Lateral thinking :</strong> Enchaînement de vulnérabilités multiples (machine Dev) et adaptation aux obstacles (pare-feu, payload switching).</li>
+      </ul>
+
+      <div style="margin-top: 4rem; display: flex; justify-content: center;">
+        <a href="../index.html#projects" class="btn" style="width: 50px; height: 50px; padding: 0; justify-content: center; font-size: 1.5rem; font-family: var(--vt);" title="Retour à l'accueil">⌂</a>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <p class="footer-text">© 2025–2026 <span data-b64="V0VCRVJUIEzDiU8="></span> - IUT Clermont-Ferrand - Aubière</p>
+  </div>
+</footer>
+
+<script src="../main.js"></script>
+
+</body>
+</html>

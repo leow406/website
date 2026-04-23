@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nom du Projet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    /* ─── Styles spécifiques aux pages de projets ──────── */
+    
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--fg-dimmer);
+      text-decoration: none;
+      font-size: 0.9em;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      transition: color 0.15s, transform 0.15s;
+    }
+    .back-link:hover {
+      color: var(--accent);
+      transform: translateX(-4px);
+    }
+
+    .project-hero {
+      padding: 2rem 0 3rem;
+      border-bottom: 1px solid var(--fg-dimmer);
+    }
+    .project-hero-pre {
+      font-size: 0.8em;
+      color: var(--red);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+    .project-hero-title {
+      font-family: var(--vt);
+      font-size: clamp(40px, 6vw, 72px);
+      color: var(--accent);
+      line-height: 1;
+      letter-spacing: 3px;
+      margin-bottom: 1rem;
+    }
+    
+    .project-meta {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+      font-size: 0.85em;
+      color: var(--fg-dimmer);
+    }
+    .project-meta span { color: var(--fg-dim); }
+    
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 1.5rem;
+    }
+
+    .project-content {
+      padding: 3.5rem 0;
+      color: var(--fg-dim);
+      line-height: 1.85;
+    }
+    .project-content h2 {
+      font-family: var(--vt);
+      font-size: 2rem;
+      color: var(--accent);
+      margin: 2.5rem 0 1rem;
+      letter-spacing: 2px;
+      font-weight: normal;
+    }
+    .project-content h2::before {
+      content: '// ';
+      color: var(--fg-dimmer);
+    }
+    .project-content p { margin-bottom: 1.5rem; }
+    
+    .project-content ul {
+      margin-bottom: 1.5rem;
+      list-style: none;
+    }
+    .project-content li { margin-bottom: 0.5rem; }
+    .project-content li::before {
+      content: '> ';
+      color: var(--red);
+    }
+    
+    .project-image {
+      width: 100%;
+      border: 1px solid var(--fg-dimmer);
+      margin: 2rem 0;
+      background: rgba(255,255,255,0.02);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="../index.html" class="site-title">leow406<span class="cursor">_</span></a>
+    <nav>
+      <a href="../index.html#about">a propose de moi</a>
+      <a href="../index.html#experience">experience</a>
+      <a href="../index.html#skills">compétences</a>
+      <a href="../index.html#projects" class="active">projets</a>
+      <a href="../index.html#misc">divers</a>
+      <a href="../index.html#contact">contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <div style="padding-top: 2rem;">
+      <a href="../index.html#projects" class="back-link">← Retour aux projets</a>
+    </div>
+
+    <div class="project-hero">
+      <p class="project-hero-pre">// project_name</p>
+      <h1 class="project-hero-title glitch">TITRE DU PROJET</h1>
+      
+      <div class="project-meta">
+        <div>Date <span>Avril 2025</span></div>
+        <div>Rôle <span>Pentester / Sysadmin</span></div>
+        <div>Contexte <span>Projet Universitaire</span></div>
+      </div>
+
+      <p class="hero-bio">
+        Description courte du projet
+      </p>
+
+      <div class="project-tags">
+        <span class="tag red">Security</span>
+        <span class="tag">Network</span>
+        <span class="tag">Linux</span>
+      </div>
+    </div>
+
+    <section class="project-content fade-in">
+      <h2>Contexte & Objectifs</h2>
+      <p>
+        texte descriptif du projet
+      </p>
+
+      <h2>Solutions & Déploiement</h2>
+      <p>
+       texte descriptif des solutions et du déploiement
+      </p>
+      <ul>
+        <li>Étape 1 : Analyse de l'existant et définition de l'architecture</li>
+        <li>Étape 2 : Configuration des services et sécurisation</li>
+        <li>Étape 3 : Tests d'intrusion ou validation fonctionnelle</li>
+      </ul>
+
+      <!-- <img src="../images/placeholder.png" alt="Aperçu du projet" class="project-image"> -->
+
+      <h2>Résultats & Bilan</h2>
+      <p>
+        Bilan
+      </p>
+
+      <div class="hero-links" style="margin-top: 3rem;">
+        <a href="#" class="btn btn-primary" target="_blank">Voir le code (GitHub)</a>
+        <a href="#" class="btn" target="_blank">Documentation complète</a>
+      </div>
+    </section>
+
+  </div>
+    <div style="margin-top: 4rem; display: flex; justify-content: center;">
+        <a href="../index.html" class="btn" style="width: 50px; height: 50px; padding: 0; justify-content: center; font-size: 1.5rem; font-family: var(--vt);" title="Retour à l'accueil">⌂</a>
+      </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <p class="footer-text">© 2025–2026 <span data-b64="V0VCRVJUIEzDiU8="></span> - IUT Clermont-Ferrand - Aubière</p>
+  </div>
+</footer>
+
+<script src="../main.js"></script>
+
+</body>
+</html>
