@@ -8,6 +8,6 @@ Site vitrine développé en HTML / CSS / JavaScript vanilla. Il présente mon pa
 
 ## Stack
 
-![HTML](https://img.shields.io/badge/HTML-77%25-orange)
-![CSS](https://img.shields.io/badge/CSS-20%25-blue)
-![JavaScript](https://img.shields.io/badge/JavaScript-3%25-yellow)
+![HTML](https://img.shields.io/badge/HTML-85%25-orange)
+![CSS](https://img.shields.io/badge/CSS-12%25-blue)
+![JavaScript](https://img.shields.io/badge/JavaScript-2%25-yellow)
