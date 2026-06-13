@@ -2,6 +2,7 @@
 
 // Décodage UTF-8
 function b64decode(str) {
+  // atob() renvoie du latin-1 brut ; Uint8Array + TextDecoder gère correctement l'UTF-8
   const bytes = Uint8Array.from(atob(str), c => c.charCodeAt(0));
   return new TextDecoder().decode(bytes);
 }
@@ -10,7 +11,7 @@ function b64decode(str) {
 const titleEl = document.querySelector('title[data-b64]');
 if (titleEl) titleEl.textContent = b64decode(titleEl.dataset.b64);
 
-// Décode les éléments texte simples (nom, h1, etc.)
+// Décode les éléments texte simples
 document.querySelectorAll('[data-b64]').forEach(el => {
   el.textContent = b64decode(el.dataset.b64);
 });
@@ -85,6 +86,7 @@ const skillObs = new IntersectionObserver((entries) => {
       e.target.querySelectorAll('.skill-bar').forEach(bar => {
         const w = bar.style.width;
         bar.style.width = '0';
+        // rAF force un repaint entre le reset et la valeur cible pour déclencher la transition CSS
         requestAnimationFrame(() => { bar.style.width = w; });
       });
       skillObs.unobserve(e.target);
