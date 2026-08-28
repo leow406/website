@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title data-b64="V0VCRVJUIEzDqW8gLSBwb3J0Zm9saW8"></title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -18,12 +19,12 @@
       <a href="#" class="site-title">portfolio.exe<span class="cursor">_</span></a>
       <nav>
         <a href="#about">À propos de moi</a>
-        <a href="#experience">experience</a>
-        <a href="#skills">compétences</a>
-        <a href="#projects">projets</a>
+        <a href="#experience">Expérience</a>
+        <a href="#skills">Compétences</a>
+        <a href="#projects">Projets</a>
         <!-- <a href="#malware">malware</a> a changer ptetre jsp -->
-        <a href="#misc">divers</a>
-        <a href="#contact">contact</a>
+        <a href="#misc">Divers</a>
+        <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
@@ -49,8 +50,8 @@
           <a href="#cv" class="btn cv-trigger">Télécharger mon CV</a>
           
           <a href="#" id="copy-mail-btn" class="btn" data-b64-email="Y29udGFjdC5sZW9AcmVsYWkuYWxlZWFzLmNvbQ==">Mail</a>
-          <a href="https://github.com/leow406" class="btn" target="_blank">GitHub</a>
-          <a href="https://tryhackme.com/p/Kowalskiii" class="btn" target="_blank">TryHackMe</a>
+          <a href="https://github.com/leow406" class="btn" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://tryhackme.com/p/Kowalskiii" class="btn" target="_blank" rel="noopener noreferrer">TryHackMe</a>
         </div>
       </section>
 
@@ -88,17 +89,42 @@
           <div class="section-line"></div>
           <span class="section-num">02</span>
         </div>
-        <div class="exp-list">
+        <div class="timeline">
 
-          <div class="exp-item">
-            <div>
-              <div class="exp-date">Avr → Juin 2025</div>
-              <div class="exp-company">Trivium Packaging</div>
+          <div class="timeline-item">
+            <div class="timeline-node"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">Avr → Mai 2026</div>
+              <p class="timeline-company">Trivium Packaging</p>
+              <p class="timeline-title">Stage Cybersécurité - Validation continue (BAS)</p>
+              <p class="timeline-summary">Sélection d'une solution BAS (Breach and Attack Simulation) pour valider
+                en continu l'efficacité des contrôles de sécurité face aux menaces réelles.</p>
+              <button class="timeline-toggle" type="button" aria-expanded="false">
+                <span class="toggle-icon">[+]</span><span class="toggle-label">Détails</span>
+              </button>
+              <div class="timeline-details">
+                <ul>
+                  <li>Étude comparative multicritères de 2 plateformes BAS (Cymulate vs Picus), croisant cahier
+                    des charges, MITRE ATT&amp;CK et angles morts d'un audit Red Team</li>
+                  <li>Validation de la couverture face aux techniques ayant échappé à l'EDR/SOC : mouvements
+                    latéraux, Kerberoasting, abus de certificats ADCS</li>
+                  <li>Recommandation Cymulate validée par l'équipe InfoSec, en vue d'un déploiement production</li>
+                </ul>
+              </div>
             </div>
-            <div>
-              <p class="exp-title">Stage Cybersécurité - InfoSec Internationale</p>
-              <div class="exp-body">
-                Mise en place d'une politique DMARC complète.
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-node"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">Avr → Juin 2025</div>
+              <p class="timeline-company">Trivium Packaging</p>
+              <p class="timeline-title">Stage Cybersécurité - InfoSec Internationale</p>
+              <p class="timeline-summary">Mise en place d'une politique DMARC complète.</p>
+              <button class="timeline-toggle" type="button" aria-expanded="false">
+                <span class="toggle-icon">[+]</span><span class="toggle-label">Détails</span>
+              </button>
+              <div class="timeline-details">
                 <ul>
                   <li>Implémentation SPF / DKIM / DMARC</li>
                   <li>Plateforme Valimail - analyse de 135 000 rapports / 30 jours</li>
@@ -110,16 +136,19 @@
             </div>
           </div>
 
-          <div class="exp-item">
-            <div>
-              <div class="exp-date">Été 2023 / 2024</div>
-              <div class="exp-company">Trivium Packaging</div>
-            </div>
-            <div>
-              <p class="exp-title">Contrôleur Qualité</p>
-              <div class="exp-body">
-                5 semaines en usine (dont 3 de nuit). Contrôle qualité, transmission aux techniciens, respect des
-                cadences industrielles.
+          <div class="timeline-item">
+            <div class="timeline-node"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">Été 2023 / 2024</div>
+              <p class="timeline-company">Trivium Packaging</p>
+              <p class="timeline-title">Contrôleur Qualité</p>
+              <p class="timeline-summary">Contrôle qualité en environnement industriel.</p>
+              <button class="timeline-toggle" type="button" aria-expanded="false">
+                <span class="toggle-icon">[+]</span><span class="toggle-label">Détails</span>
+              </button>
+              <div class="timeline-details">
+                <p>5 semaines en usine (dont 3 de nuit). Contrôle qualité, transmission aux techniciens, respect des
+                  cadences industrielles.</p>
               </div>
             </div>
           </div>
@@ -481,11 +510,11 @@
             <span class="contact-icon">[✉]</span>
             <span data-b64="Y29udGFjdC5sZW9AcmVsYWkuYWxlZWFzLmNvbQ=="></span>
           </a>
-          <a href="https://www.linkedin.com/in/léo-webert-0671222a9/" class="contact-item" target="_blank">
+          <a href="https://www.linkedin.com/in/léo-webert-0671222a9/" class="contact-item" target="_blank" rel="noopener noreferrer">
             <span class="contact-icon">[in]</span>
             LinkedIn
           </a>
-          <a href="https://github.com/leow406" class="contact-item" target="_blank">
+          <a href="https://github.com/leow406" class="contact-item" target="_blank" rel="noopener noreferrer">
             <span class="contact-icon">[gh]</span>
             github.com/leow406
           </a>
@@ -512,7 +541,7 @@
         <div class="modal-controls">
           <span>_</span>
           <span>□</span>
-          <span class="close-trigger" style="cursor:pointer">×</span>
+          <button type="button" class="close-trigger modal-close-btn" aria-label="Fermer">×</button>
         </div>
       </div>
       <div class="modal-body">

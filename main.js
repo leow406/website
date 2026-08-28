@@ -118,35 +118,102 @@ if (copyMailBtn) {
   });
 }
 
+/*  Accordéon timeline expérience  */
+
+document.querySelectorAll('.timeline-toggle').forEach(btn => {
+  const details = btn.closest('.timeline-content').querySelector('.timeline-details');
+  const icon    = btn.querySelector('.toggle-icon');
+  const label   = btn.querySelector('.toggle-label');
+
+  btn.addEventListener('click', () => {
+    const open = btn.getAttribute('aria-expanded') === 'true';
+
+    if (open) {
+      details.style.maxHeight = '0px';
+      btn.setAttribute('aria-expanded', 'false');
+      icon.textContent = '[+]';
+      label.textContent = 'Détails';
+    } else {
+      details.style.maxHeight = details.scrollHeight + 'px';
+      btn.setAttribute('aria-expanded', 'true');
+      icon.textContent = '[-]';
+      label.textContent = 'Réduire';
+    }
+  });
+});
+
 /*  Gestion de la Modal CV  */
 
 const modal = document.getElementById('cv-modal');
+const modalBox = modal ? modal.querySelector('.modal-box') : null;
 const triggers = document.querySelectorAll('.cv-trigger');
 const closers = document.querySelectorAll('.close-trigger');
+
+let lastFocusedEl = null; // Element à refocus après fermeture
+
+function getFocusableEls() {
+  return modalBox.querySelectorAll(
+    'a[href], button:not([disabled]), input, textarea, select, [tabindex]:not([tabindex="-1"])'
+  );
+}
+
+function openModal(trigger) {
+  lastFocusedEl = trigger || document.activeElement;
+  modal.classList.add('active');
+  document.body.style.overflow = 'hidden'; // Empeche le scroll
+
+  // Focus le premier élément interactif de la modal
+  const focusable = getFocusableEls();
+  if (focusable.length) focusable[0].focus();
+}
+
+function closeModal() {
+  modal.classList.remove('active');
+  document.body.style.overflow = '';
+  if (lastFocusedEl) lastFocusedEl.focus(); // Rend le focus au déclencheur
+}
 
 if (modal) {
   // Ouvrir la modal
   triggers.forEach(trigger => {
     trigger.addEventListener('click', (e) => {
       e.preventDefault();
-      modal.classList.add('active');
-      document.body.style.overflow = 'hidden'; // Empeche le scroll
+      openModal(trigger);
     });
   });
 
   // Boutons popup
   closers.forEach(closer => {
-    closer.addEventListener('click', () => {
-      modal.classList.remove('active');
-      document.body.style.overflow = '';
-    });
+    closer.addEventListener('click', closeModal);
   });
 
   // Fermer en cliquant a coté de la box
   modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      modal.classList.remove('active');
-      document.body.style.overflow = '';
+    if (e.target === modal) closeModal();
+  });
+
+  // Fermer avec Echap + piégeage du focus (Tab) tant que la modal est ouverte
+  modal.addEventListener('keydown', (e) => {
+    if (!modal.classList.contains('active')) return;
+
+    if (e.key === 'Escape') {
+      closeModal();
+      return;
+    }
+
+    if (e.key === 'Tab') {
+      const focusable = Array.from(getFocusableEls());
+      if (!focusable.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
     }
   });
 }
